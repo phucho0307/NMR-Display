@@ -14,7 +14,6 @@ module.exports = {
             green: "#A5C882",
             white: "#FEFCFC",
             button: "#080821",
-
       }
     },
   },
