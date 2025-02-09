@@ -27,6 +27,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="how-it-works" element={<HowItWorks />} />
           <Route path="nmr-fundamentals" element={<NMRFundamentals/>} />
           <Route path="course-usage" element={<CourseUsage/>} />
