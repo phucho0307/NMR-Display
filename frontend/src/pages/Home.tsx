@@ -29,9 +29,6 @@ export default function Home() {
           className="absolute top-[540px] left-[1560px]"
         ></img>
       </Link>
-      <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
-        HEADING
-      </p>
     </main>
   );
 }

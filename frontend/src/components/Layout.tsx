@@ -5,7 +5,7 @@ export default function Layout() {
       return (
             <main className="">
                   <Navbar />
-                  <main className="bg-[#0C0C31]">
+                  <main className="bg-[#0C0C31] text-[#FEFCFC]">
                   <Outlet />
                   </main>
                   

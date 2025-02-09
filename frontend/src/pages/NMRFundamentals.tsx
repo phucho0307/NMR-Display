@@ -23,28 +23,33 @@ export default function NMRFundamentals() {
         R
       </p>
 
-      <div className="text-[#FEFCFC]">
+      <div className="absolute top-[831px] flex space-x-[76px] w-[1920px] justify-center">
         <Link
           to="/nmr-instrumentation"
-          className="absolute w-[395px] h-[130px] left-[298px] top-[831px] font-semibold text-[40px] px-15 py-5 rounded bg-[#080821] text-center"
+          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
           NMR
           <br />
           Instrumentation
         </Link>
         <Link
-          to="/course-usage"
-          className="absolute w-[395px] h-[130px] left-[768px] top-[831px] font-semibold text-[40px] px-[60px] py-5 rounded bg-[#080821] text-center"
+          to="/interpreting"
+          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
           Interpreting<br/>NMR Spectrum
         </Link>
         < Link
-          to="/faculty-research"
-          className="absolute  w-[395px] h-[130px] left-[1234px] top-[831px] font-semibold text-[40px] px-15 py-5 rounded bg-[#080821] text-center"
+          to="/diagram"
+          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
-          Diagram <br/> of Componets
+          Diagram of <br/> Componets
         </Link>
       </div>
+      <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+        NMR Fundamentals
+      </p>
+
+      
     </main>
   );
 }
