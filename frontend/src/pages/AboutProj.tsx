@@ -31,10 +31,10 @@ export default function AboutProj() {
           About
         </Link>
         <Link
-          to="/credit"
+          to="/credits"
           className="flex font-semibold items-center justify-center  text-[40px]  w-[390px] h-[100px] rounded bg-[#080821] text-center"
         >
-          Credit
+          Credits
         </Link>
         <Link
           to="/special-thanks"

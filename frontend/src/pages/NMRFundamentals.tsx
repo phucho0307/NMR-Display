@@ -45,9 +45,9 @@ export default function NMRFundamentals() {
           Diagram of <br/> Componets
         </Link>
       </div>
-      <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
         NMR Fundamentals
-      </p>
+      </h1>
 
       
     </main>
