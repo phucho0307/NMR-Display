@@ -30,7 +30,7 @@ export default function Navbar() {
         className="logo absolute top-[38px] left-[59px] text-[#FEFCFC]"
       >
         <img
-          src="/src/assets/NMR-Logo.png"
+          src="/images/NMR-Logo.png"
           alt="NMR LOGO"
           className="border-[4px] border-[#A5C882]"
         ></img>

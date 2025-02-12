@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import { HowItWorks } from "../data/HowItWorks";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import Methanol from "../assets/Methanol";
-import Intensity from "../assets/Intensity";
-import OneAttachedToOxygen from "../assets/OneAttachedToOxygen";
-import OthersAttachedToCarbon from "../assets/OthersAttachedToCarbon";
-import PPM from "../assets/PPM";
-import SingleHydrogen from "../assets/SingleHydrogen";
-import ThreeHydrogens from "../assets/ThreeHydrogens";
-import NMRSpectrumOfMethanol from "../assets/NMRSpectrumOfMethanol";
-import TwoPeaks from "../assets/TwoPeaks";
-import ShorterPeaks from "../assets/ShorterPeaks";
-import TallerPeaks from "../assets/TallerPeaks";
+import Methanol from "../components/Methanol";
+import Intensity from "../components/Intensity";
+import OneAttachedToOxygen from "../components/OneAttachedToOxygen";
+import OthersAttachedToCarbon from "../components/OthersAttachedToCarbon";
+import PPM from "../components/PPM";
+import SingleHydrogen from "../components/SingleHydrogen";
+import ThreeHydrogens from "../components/ThreeHydrogens";
+import NMRSpectrumOfMethanol from "../components/NMRSpectrumOfMethanol";
+import TwoPeaks from "../components/TwoPeaks";
+import ShorterPeaks from "../components/ShorterPeaks";
+import TallerPeaks from "../components/TallerPeaks";
 
 export default function HowItWorksComponent() {
   interface ComponentMappingObject {

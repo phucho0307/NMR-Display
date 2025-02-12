@@ -27,7 +27,6 @@ SECRET_KEY = 'django-insecure-z-968ov2_-hvp20$8non3ba(k*a6l!d*v3%#a8%m^@78_*-ads
 
 # Secret Key (Keep this secure in production)
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
-print(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -123,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = [
+STATICFILES_DIRS = [
     BASE_DIR / 'dist',
 ]
 

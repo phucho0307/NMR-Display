@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Diagram() {
   // 3 divs aligned horizontally
@@ -6,7 +6,7 @@ export default function Diagram() {
   // the buttons center aligned horizontally each with the different positions
   // diagram in the middle
 
-  const [response, setResponse] = useState(null);
+  // const [response, setResponse] = useState(null);
 
   const handleClick = async () => {};
 
