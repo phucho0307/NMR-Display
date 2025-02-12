@@ -104,11 +104,48 @@ export const HowItWorks: HowItWorksType = [
     `,
   },
   {
+    title: "The Acquisition",
+    description: `
+      <p>This part of the process can take some time, depending on what information we need and what kind of sample we have.  Here we collect the NMR data.</p>
+      <p>After we tune the spectrometer to a particular nucleus and shim the magnetic field, the sample is pulsed with radio waves at the resonant frequency to initiate precession.</p>
+      <p>All these little magnets precessing together add up to create a bigger oscillating magnetic field. It is measured through magnetic induction (exactly like how the antenna of a radio picks up radio signals).</p>
+      <p>Once the pulse has ended, the nuclei initially precess together and this yields an NMR signal that is recorded in a computer.</p>
+      <p>Very shortly after the pulse, the nuclei stop precessing together (stop being in phase). The nuclei get out of sync for two main reasons:</p>
+      <ol class="list-decimal pl-6 text-[30px] text-[#FEFCFC] flex flex-col gap-10">
+        <li>
+          <p>1. The nuclei within a molecule are in slightly different magnetic environments and so precess at slightly different frequencies.</p>
+          <p>For example, consider the two different hydrogen environments in <button data-id="1" id="component-btn" class="underline text-[#A5C882]">methanol:</button></p>
+          <p><button data-id="2" id="component-btn" class="underline text-[#A5C882]">one is attached to oxygen</button> and <button data-id="3" id="component-btn" class="underline text-[#A5C882]">the others are attahced to carbon.</button></p>
+        </li>
+        <li>2. The nuclei gradually “relax” back to equilibrium.</li>
+      </ol>
+      <p>As the nuclei stop precessing in sync, the strength of the magnetic induction decreases.  One can observe this magnetic induction decay over time.  This is called the Free Induction Decay (FID).</p>
+      <p>If an FID signal is weak, the experiment can be repeated and added together in order to improve the signal to noise. The number of scans needed depends on the type of experiment, the amount of sample you have, and the problem you're trying to solve.</p>
+    `,
+  },
+  {
+    title: "The Transformation",
+    description:`
+      <p>While acquisitions can take anywhere from seconds to hours, the “transformation” takes only seconds.</p>
+      <p>Imagine a short burst of sound from an orchestra played through a speaker.  The oscillations of the speaker representing all those superimposed sounds are like the FID described above.</p>
+      <p>But when we listen to an orchestra, we can pick out different notes/frequencies even though all the notes are played at the same time.</p>
+      <p>Analogously, using math and a computer, we can convert all of the precessions (sounds) from the NMR acquisition into their corresponding frequencies (notes).</p>
+      <p>That type of math is called the Fourier Transform of the FID and with it we can see at what slightly different frequencies the nuclei are precessing and how many nuclei are precessing at each of these frequencies.</p>
+      <P>From this information, chemists can  understand the sample's chemical structure.</p>
+    `
+  },
+  {
     title: "The Spectrum",
     description: `
       <p>A plot of the precession frequencies versus their intensity is called an NMR spectrum.</p>
-      <p>The small variations in the precession frequency between the different nuclei in a molecule are called “chemical shift”, and it offers clues about the molecular structure.</p>
-      <p>The range of chemical shift frequencies is typically very small - so small that the amount of change is measured in parts per million.</p>
+      <p>The small variations in the precession frequency between the different nuclei in a molecule are called “chemical shift”, and it offers clues about the molecular structure. The range of chemical shift frequencies is typically very small - so small that the amount of change is measured in parts per million.</p>
+      <p>A spectrum is usually presented as <button id="component-btn" class="underline text-[#A5C882]">Intensity</button> vs. <button id="component-btn" class="underline text-[#A5C882]">parts-per-million (PPM)</button>.</p>
+      <p>We see the spectrum as a graphical representation of lines that allow a trained scientist to “see” a chemical structure.</p>
+      <p>Often, more than one type of NMR spectrum  is needed to identify a chemical compound. There are many different types of NMR experiments.</p>
+      <p>Let’s assume that we have performed enough experiments and gathered enough data to know that we are working with a sample of Methanol.</p>
+      <p>If we recall the molecular structure of <button id="component-btn" class="underline text-[#A5C882]">Methanol</button>, we know that it's composed of <button id="component-btn" class="underline text-[#A5C882]">a single hydrogen</button> attached to oxygen and <button id="component-btn" class="underline text-[#A5C882]">three hydrogens</button> attached to a carbon.</p>
+      <p>In this <button id="component-btn" class="underline text-[#A5C882]"><sup>1</sup>H NMR spectrum of Methanol</button> we see <button id="component-btn" class="underline text-[#A5C882]">two peaks</button> that further validate the different chemical environments of hydrogen within the sample.</p>
+      <p>The <button id="component-btn" class="underline text-[#A5C882]">shorter peak</button> at 4.8 ppm is the single hydrogen attached to the oxygen. The <button id="component-btn" class="underline text-[#A5C882]">taller peak</button> at 3.6 ppm are the three hydrogens attached to the carbon.</p>
     `,
   },
   {
