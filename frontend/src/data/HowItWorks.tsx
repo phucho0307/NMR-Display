@@ -125,27 +125,27 @@ export const HowItWorks: HowItWorksType = [
   },
   {
     title: "The Transformation",
-    description:`
+    description: `
       <p>While acquisitions can take anywhere from seconds to hours, the “transformation” takes only seconds.</p>
       <p>Imagine a short burst of sound from an orchestra played through a speaker.  The oscillations of the speaker representing all those superimposed sounds are like the FID described above.</p>
       <p>But when we listen to an orchestra, we can pick out different notes/frequencies even though all the notes are played at the same time.</p>
       <p>Analogously, using math and a computer, we can convert all of the precessions (sounds) from the NMR acquisition into their corresponding frequencies (notes).</p>
       <p>That type of math is called the Fourier Transform of the FID and with it we can see at what slightly different frequencies the nuclei are precessing and how many nuclei are precessing at each of these frequencies.</p>
       <P>From this information, chemists can  understand the sample's chemical structure.</p>
-    `
+    `,
   },
   {
     title: "The Spectrum",
     description: `
       <p>A plot of the precession frequencies versus their intensity is called an NMR spectrum.</p>
       <p>The small variations in the precession frequency between the different nuclei in a molecule are called “chemical shift”, and it offers clues about the molecular structure. The range of chemical shift frequencies is typically very small - so small that the amount of change is measured in parts per million.</p>
-      <p>A spectrum is usually presented as <button id="component-btn" class="underline text-[#A5C882]">Intensity</button> vs. <button id="component-btn" class="underline text-[#A5C882]">parts-per-million (PPM)</button>.</p>
+      <p>A spectrum is usually presented as <button data-id="4" id="component-btn" class="underline text-[#A5C882]">Intensity</button> vs. <button data-id="5" id="component-btn" class="underline text-[#A5C882]">parts-per-million (PPM)</button>.</p>
       <p>We see the spectrum as a graphical representation of lines that allow a trained scientist to “see” a chemical structure.</p>
       <p>Often, more than one type of NMR spectrum  is needed to identify a chemical compound. There are many different types of NMR experiments.</p>
       <p>Let’s assume that we have performed enough experiments and gathered enough data to know that we are working with a sample of Methanol.</p>
-      <p>If we recall the molecular structure of <button id="component-btn" class="underline text-[#A5C882]">Methanol</button>, we know that it's composed of <button id="component-btn" class="underline text-[#A5C882]">a single hydrogen</button> attached to oxygen and <button id="component-btn" class="underline text-[#A5C882]">three hydrogens</button> attached to a carbon.</p>
-      <p>In this <button id="component-btn" class="underline text-[#A5C882]"><sup>1</sup>H NMR spectrum of Methanol</button> we see <button id="component-btn" class="underline text-[#A5C882]">two peaks</button> that further validate the different chemical environments of hydrogen within the sample.</p>
-      <p>The <button id="component-btn" class="underline text-[#A5C882]">shorter peak</button> at 4.8 ppm is the single hydrogen attached to the oxygen. The <button id="component-btn" class="underline text-[#A5C882]">taller peak</button> at 3.6 ppm are the three hydrogens attached to the carbon.</p>
+      <p>If we recall the molecular structure of <button data-id="1" id="component-btn" class="underline text-[#A5C882]">Methanol</button>, we know that it's composed of <button data-id="7" id="component-btn" class="underline text-[#A5C882]">a single hydrogen</button> attached to oxygen and <button data-id="8" id="component-btn" class="underline text-[#A5C882]">three hydrogens</button> attached to a carbon.</p>
+      <p>In this <button data-id="9" id="component-btn" class="underline text-[#A5C882]"><sup>1</sup>H NMR spectrum of Methanol</button> we see <button data-id="10" id="component-btn" class="underline text-[#A5C882]">two peaks</button> that further validate the different chemical environments of hydrogen within the sample.</p>
+      <p>The <button data-id="11" id="component-btn" class="underline text-[#A5C882]">shorter peak</button> at 4.8 ppm is the single hydrogen attached to the oxygen. The <button data-id="12" id="component-btn" class="underline text-[#A5C882]">taller peak</button> at 3.6 ppm are the three hydrogens attached to the carbon.</p>
     `,
   },
   {

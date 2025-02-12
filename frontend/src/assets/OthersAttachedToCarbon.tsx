@@ -1,4 +1,4 @@
-export default function OthersAttahcedToCarbon() {
+export default function OthersAttachedToCarbon() {
   return (
     <svg width="60vw" height="70vh" viewBox="0 0 938 737" fill="none" xmlns="http://www.w3.org/2000/svg" className="visible">
       <rect width="938" height="737" fill="#0C0C31"></rect>
