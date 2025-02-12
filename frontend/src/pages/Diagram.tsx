@@ -1,12 +1,82 @@
+import { useState } from "react";
+
 export default function Diagram() {
+  // 3 divs aligned horizontally
+  // div 1 + 3 are the buttons on the left and right
+  // the buttons center aligned horizontally each with the different positions
+  // diagram in the middle
+
+  const [response, setResponse] = useState(null);
+
+  const handleClick = async () => {};
+
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
-      <p className="text-[#0C0C31]">hi, used to "create" the page</p>
-     <img
-        src="/src/assets/NMRDiagramPlaceholder.png"
-        alt="NMR diagram"
-        className="absolute item-center justify-center left-[500px] top-[160px]"
-      ></img>
+      <div className="absolute w-full h-[900px] flex items-center justify-center">
+        <img
+          src="/src/assets/NMRDiagramPlaceholder.png"
+          alt="NMR diagram"
+          className="h-[873.8px] w-[530.4px]"
+        ></img>
+      </div>
+
+      <div>
+        <button
+          onClick={handleClick}
+          className="absolute top-[220px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          All Components
+        </button>
+
+        <button
+          onClick={handleClick}
+          className="absolute top-[420px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          The Magnet
+        </button>
+         
+        <button
+          onClick={handleClick}
+          className="absolute top-[620px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          Liquid Nitrogen
+        </button>
+
+        <button
+          onClick={handleClick}
+          className="absolute top-[820px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          Liquid Helium
+        </button>
+
+        <button
+          onClick={handleClick}
+          className="absolute top-[220px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          The Sample
+        </button>
+
+        <button
+          onClick={handleClick}
+          className="absolute top-[420px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          Mylar
+        </button>
+
+        <button
+          onClick={handleClick}
+          className="absolute top-[620px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          Shim Colis
+        </button>
+
+        <button
+          onClick={handleClick}
+          className="absolute top-[820px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+        >
+          The Pulse
+        </button>
+      </div>
     </main>
   );
 }

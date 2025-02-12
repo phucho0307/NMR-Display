@@ -19,6 +19,9 @@ import Helen from "./pages/Helen"
 import Credits from "./pages/Credits"
 import AboutProj from "./pages/AboutProj"
 import SpecialThanks from "./pages/SpecialThanks"
+import SpecLab from "./pages/SpecLab"
+import ThreeWeek from "./ThreeWeek"
+import Stereo from "./Stereo"
 
 
 function App() {
@@ -46,6 +49,10 @@ function App() {
           <Route path="about" element={<About/>} />
           <Route path="credits" element={<Credits/>} />
           <Route path="special-thanks" element={<SpecialThanks/>} />
+          <Route path="spec-lab" element={<SpecLab/>} />
+          <Route path="3-week" element={<ThreeWeek/>} />
+          <Route path="stereo" element={<Stereo/>} />
+
 
         </Route>
       </Routes>
