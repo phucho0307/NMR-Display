@@ -24,7 +24,7 @@ export default function Navbar() {
   // }, [location]); // Re-run effect when location changes
 
   return (
-    <nav className="nav w-[1920px] h-[158px] bg-[#0C0C31] border-b-[4px] border-[#010005]">
+    <nav className="nav w-full h-[158px] bg-[#0C0C31] border-b-[4px] border-[#010005] fixed">
       <Link
         to="/"
         className="logo absolute top-[38px] left-[59px] text-[#FEFCFC]"

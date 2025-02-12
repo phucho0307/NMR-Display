@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* Customize scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+    width: 20px; /* Adjust width */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #A5C882; /* Scrollbar color */
+    border-radius: 10px; /* Rounded edges */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #0C0C31; /* Track color */
+  }
