@@ -41,7 +41,7 @@ export default function CourseUsage() {
           Chemistry
         </Link>
         <Link
-          to="/biological"
+          to="/bio-inst"
           className="flex font-semibold text-[40px] px-[60px] py-[8px] justify-between rounded bg-[#080821] text-center"
         >
           Biological <br /> Instrumentation

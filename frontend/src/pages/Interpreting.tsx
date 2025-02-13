@@ -1,4 +1,5 @@
 export default function Interpreting() {
+  // there is an arrow similar to how it works
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
       <p className="text-[#0C0C31]">hi, used to "create" the page</p>

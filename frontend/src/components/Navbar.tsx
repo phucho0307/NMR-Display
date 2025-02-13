@@ -1,27 +1,6 @@
 import { Link } from "react-router";
-//import { Link, useLocation } from "react-router";
-//import { useState, useEffect } from "react";
-
-// interface Props {
-//   initialVisibility?: boolean;
-//   headng: string;
-// }
-
-//const [isHeaderVisible, setIsHeaderVisible] = useState(true)
 
 export default function Navbar() {
-  // const location = useLocation(); // Get the current location
-  // const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
-  // useEffect(() => {
-  //   // Array of paths where you want the header to be hidden
-  //   const hiddenPaths = ["/", "/"]; // Add your paths
-
-  //   // Check if the current path is in the hiddenPaths array
-  //   const shouldHideHeader = hiddenPaths.includes(location.pathname);
-
-  //   setIsHeaderVisible(!shouldHideHeader); // Set visibility based on path
-  // }, [location]); // Re-run effect when location changes
 
   return (
     <nav className="nav w-full h-[158px] bg-[#0C0C31] border-b-[4px] border-[#010005] fixed">

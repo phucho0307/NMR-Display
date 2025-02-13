@@ -14,11 +14,15 @@ export default function Diagram() {
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
       <div className="absolute w-full h-[900px] flex items-center justify-center">
         <img
-          src="/src/assets/NMRDiagramPlaceholder.png"
+          src="/public/images/NMRDiagramPlaceholder.png"
           alt="NMR diagram"
           className="h-[873.8px] w-[530.4px]"
         ></img>
       </div>
+      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+        Diagram of Components
+      </h1>
+
 
       <div>
         <button

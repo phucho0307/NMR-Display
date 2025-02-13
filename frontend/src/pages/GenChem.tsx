@@ -1,13 +1,13 @@
 export default function GenChem() {
   return (
-    <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
+    <main className="bg-[#0C0C31] w-full h-full">
       <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
         General Chemistry
       </h1>
       <img
-          src="/src/assets/cermak-student.png"
+          src="/public/images/cermak-student.png"
           alt="general chemistry"
-          className=" h-full"
+          className="h-full "
         ></img>
 
       <div className=" w-[960px] ">
