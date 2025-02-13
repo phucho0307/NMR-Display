@@ -81,8 +81,8 @@ export default function HowItWorksComponent() {
 
   return (
     <div className="flex flex-col gap-2 items-center bg-[#0C0C31] h-full">
-      <div className="flex justify-center items-center gap-10 w-full px-10 h-[700px]">
-        <h1 className="text-[60px] font-bold text-[#A5C882] absolute top-12 left-64">How it Works</h1>
+      <div className="flex justify-center items-center w-full px-10 h-[790px]">
+        <h1 className="text-[70px] font-bold text-[#A5C882] absolute top-12 left-64">How it Works</h1>
         <div className="w-1/2 flex items-center justify-center h-full">
           {showComponent && currentComponent ? (
             currentComponent.component
@@ -96,7 +96,7 @@ export default function HowItWorksComponent() {
 
         <div className="w-1/2 flex items-center justify-center h-full">
           <div
-            className="text-[25px] text-[#FEFCFC] leading-relaxed flex flex-col gap-[30px] max-h-[500px] overflow-y-auto px-4 scrollbar-custom"
+            className="text-[36px] text-[#FEFCFC] leading-relaxed flex flex-col gap-[30px] max-h-[700px] overflow-y-auto px-4 scrollbar-custom"
             dangerouslySetInnerHTML={{
               __html: currentItem.description,
             }}
