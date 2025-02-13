@@ -11,7 +11,7 @@ import Interpreting from "./pages/Interpreting";
 import Diagram from "./pages/Diagram";
 import GenChem from "./pages/GenChem";
 import OrgChem from "./pages/OrgChem";
-import Biological from "./pages/Biological";
+import BioInst from "./pages/BioInst";
 import AdvSyn from "./pages/AdvSyn";
 import Katie from "./pages/Katie";
 import Diana from "./pages/Diana";
@@ -20,6 +20,15 @@ import About from "./pages/About";
 import Credits from "./pages/Credits";
 import SpecialThanks from "./pages/SpecialThanks";
 import SpecLab from "./pages/SpecLab";
+import Stereo from "./pages/Stereo";
+import ThreeWeek from "./pages/ThreeWeek";
+import Yeast from "./pages/yeast"; // why 
+import NuclProt from "./pages/NuclProt";
+import DetRate from "./pages/DetRate";
+import LigSyn from "./pages/LigSyn";
+import PreCat from "./pages/PreCat";
+import AsymSyn from "./pages/AsymSyn";
+import SynPho from "./pages/SynPho";
 
 function App() {
   return (
@@ -37,7 +46,7 @@ function App() {
           <Route path="diagram" element={<Diagram />} />
           <Route path="gen-chem" element={<GenChem />} />
           <Route path="org-chem" element={<OrgChem />} />
-          <Route path="biological" element={<Biological />} />
+          <Route path="bio-inst" element={<BioInst />} />
           <Route path="adv-syn" element={<AdvSyn />} />
           <Route path="katie" element={<Katie />} />
           <Route path="diana" element={<Diana />} />
@@ -46,6 +55,14 @@ function App() {
           <Route path="credits" element={<Credits />} />
           <Route path="special-thanks" element={<SpecialThanks />} />
           <Route path="spec-lab" element={<SpecLab />} />
+          <Route path="stereo" element={<Stereo />} />
+          <Route path="3-week" element={<ThreeWeek />} />
+          <Route path="yeast" element={<Yeast />} />
+          <Route path="nucl-prot" element={<NuclProt />} />
+          <Route path="det-rate" element={<DetRate />} />
+          <Route path="pre-cat" element={<PreCat />} />
+          <Route path="asym-syn" element={<AsymSyn />} />
+          <Route path="syn-pho" element={<SynPho />} />
         </Route>
       </Routes>
     </>

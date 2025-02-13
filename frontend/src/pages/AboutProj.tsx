@@ -45,7 +45,7 @@ export default function AboutProj() {
       </div>
 
       <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
-        About
+        About this Project
       </p>
     </main>
   );
