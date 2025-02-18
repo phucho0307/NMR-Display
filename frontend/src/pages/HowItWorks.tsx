@@ -96,7 +96,7 @@ export default function HowItWorksComponent() {
 
         <div className="w-1/2 flex items-center justify-center h-full">
           <div
-            className="text-[36px] text-[#FEFCFC] leading-relaxed flex flex-col gap-[30px] max-h-[700px] overflow-y-auto px-4 scrollbar-custom"
+            className="text-[36px] text-[#FEFCFC] leading-relaxed flex flex-col gap-[30px] max-h-[700px] overflow-y-auto px-4 scrollbar-custom font-serif"
             dangerouslySetInnerHTML={{
               __html: currentItem.description,
             }}

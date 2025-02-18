@@ -1,91 +1,101 @@
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
-// needs a scroll bar + links to memebers
 export default function SpecialThanks() {
   return (
-    <main className="bg-[#0C0C31]  w-full h-full">
-      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+    <main className="bg-[#0C0C31] w-full h-full p-10">
+      <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
         About this Project
       </h1>
+      <div className="flex gap-10">
+        <div className="w-1/2">
+          <h2 className="text-[150px] font-bold text-[#A5C882] absolute top-[430px] left-[130px]">
+            With many
+            <br />
+            thanks to
+          </h2>
+        </div>
 
-      <h2 className="text-[150px] font-bold text-[#A5C882] absolute top-[430px] left-[130px]">
-        With many
-        <br />
-        thanks to
-      </h2>
-
-      <Link to="/about-project" className="absolute top-[1000px] left-[1400px]">
-        {" "}
-        <ArrowBackIcon />
-      </Link>
-
-      <div className="flex absolute top-[280px] left-[130px] space-x-6">
-        <div className="w-[960px]"></div>
-        <div className="w-[730px] font-serif text-[36px] text-[#FEFCFC]">
-          <p>
-            Gregory Akerman, Ameritac, Inc. - for cutting open our retired NMR
-            instrument.
-            <br />
-            <br />
-            Dr. Laura Behling, Dean of the College (2013-2017) - for seeing the
-            vision and securing the funding necessary to cut open the retired
-            instrument.
-            <br />
-            <br />
-            Dr. Steven Cermak, USDA-ARS - for transporting and coordinating the
-            cutting of the instrument by Greg Akerman in Peoria, Illinois.
-            <br />
-            <br />
-            Steve Davis - for headshots, group photos of contributors, and
-            action photography. <br />
-            <br />
-            Fisk Design Group - for providing ongoing design work, editing, and
-            project management long after completion of Kelly Fisk’s senior
-            capstone project. <br />
-            <br />
-            Alex Fluegel - for help with getting the Raspberry Pi, website and
-            display up and running initially and for advising Philip Griffin on
-            how best to use these components.
-            <br />
-            <br /> Dr. Gregory Gilbert, Professor of Art History & Museum
-            Studies - for facilitating connections to interactive designers in
-            museums. <br />
-            <br />
-            Holabird & Root Architects - for accommodating a last-minute
-            redesign of SMC A-core to house and display the retired instrument.{" "}
-            <br />
-            <br />
-            Mark Holmes, Professor of Art - for designing and building custom
-            enclosures for electrical components. <br />
-            <br />
-            Bradley McKinney, Lead Interactive Technology Instructional Designer
-            at The Children’s Museum of Indianapolis - for providing very
-            insightful guidance related to interactive displays in the earliest
-            design stages. <br />
-            <br />
-            Levi Morgan - for securely mounting the Raspberry Pi. <br />
-            <br />
-            Matt Reed - for audio/visual support. <br />
-            <br />
-            Donna Robinson - for administrative support.
-            <br />
-            <br /> Dr. Mike Schneider, Provost and Dean of Knox College - for
-            financial support of the student programming team. <br />
-            <br />
-            Dr. Mark Shroyer, Professor of Physics - for content editing and
-            contributions. <br />
-            <br />
-            Tim Stedman, Associate Professor of Art - for design mentorship and
-            supervision of Kelly Fisk’s capstone project.
-            <br />
-            <br /> Dr. Karl Vermillion, USDA-ARS - for inspiration and content
-            editing.
-            <br />
-            <br />
-            Carla Wehmeyer - for in-class and field research photography of
-            students and faculty.
-          </p>
+        <div className="w-1/2 flex flex-col gap-10 items-start pt-10">
+          <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC] overflow-y-auto px-4 scrollbar-custom flex flex-col gap-16 h-[700px]">
+            <p>
+              Gregory Akerman, Ameritac, Inc. - for cutting open our retired NMR
+              instrument.
+            </p>
+            <p>
+              Dr. Laura Behling, Dean of the College (2013-2017) - for seeing
+              the vision and securing the funding necessary to cut open the
+              retired instrument.
+            </p>
+            <p>
+              Dr. Steven Cermak, USDA-ARS - for transporting and coordinating
+              the cutting of the instrument by Greg Akerman in Peoria, Illinois.
+            </p>
+            <p>
+              Steve Davis - for headshots, group photos of contributors, and
+              action photography.
+            </p>
+            <p>
+              Fisk Design Group - for providing ongoing design work, editing,
+              and project management long after completion of Kelly Fisk’s
+              senior capstone project.
+            </p>
+            <p>
+              Alex Fluegel - for help with getting the Raspberry Pi, website and
+              display up and running initially and for advising Philip Griffin
+              on how best to use these components.
+            </p>
+            <p>
+              Dr. Gregory Gilbert, Professor of Art History & Museum Studies -
+              for facilitating connections to interactive designers in museums.
+            </p>
+            <p>
+              Holabird & Root Architects - for accommodating a last-minute
+              redesign of SMC A-core to house and display the retired
+              instrument.
+            </p>
+            <p>
+              Mark Holmes, Professor of Art - for designing and building custom
+              enclosures for electrical components.
+            </p>
+            <p>
+              Bradley McKinney, Lead Interactive Technology Instructional
+              Designer at The Children’s Museum of Indianapolis - for providing
+              very insightful guidance related to interactive displays in the
+              earliest design stages.
+            </p>
+            <p>Levi Morgan - for securely mounting the Raspberry Pi.</p>
+            <p>Matt Reed - for audio/visual support.</p>
+            <p>Donna Robinson - for administrative support.</p>
+            <p>
+              Dr. Mike Schneider, Provost and Dean of Knox College - for
+              financial support of the student programming team.
+            </p>
+            <p>
+              Dr. Mark Shroyer, Professor of Physics - for content editing and
+              contributions.
+            </p>
+            <p>
+              Tim Stedman, Associate Professor of Art - for design mentorship
+              and supervision of Kelly Fisk’s capstone project.
+            </p>
+            <p>
+              Dr. Karl Vermillion, USDA-ARS - for inspiration and content
+              editing.
+            </p>
+            <p>
+              Carla Wehmeyer - for in-class and field research photography of
+              students and faculty.
+            </p>
+          </div>
+          <div className="flex gap-10 items-left w-full self-end justify-self-end">
+            <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start">
+              <Link to="/about-project">
+                <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+                <span>Back</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </main>

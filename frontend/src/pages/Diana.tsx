@@ -1,17 +1,8 @@
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router";
 
 export default function Diana() {
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
-      <Link
-        to="/faculty-research"
-        className="absolute top-[1000px] left-[1400px]"
-      >
-        {" "}
-        <ArrowBackIcon />
-      </Link>
-
       <div className="absolute top-[831px] flex space-x-[76px] w-[1920px] justify-center">
         <Link
           to="/asym-syn"
@@ -21,7 +12,7 @@ export default function Diana() {
         </Link>
         <Link
           to="/syn-pho"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex font-semibold items-center justify-center text-[32px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
           Synthesis of
           <br />

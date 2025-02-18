@@ -19,7 +19,7 @@ export default function Diagram() {
           className="h-[873.8px] w-[530.4px]"
         ></img>
       </div>
-      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+      <h1 className="absolute text-[#A5C882] text-[55px] font-semibold top-[40px] left-[237px]">
         Diagram of Components
       </h1>
 

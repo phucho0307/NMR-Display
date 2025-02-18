@@ -14,7 +14,7 @@ export default function BioInst() {
         </Link>
         <Link
           to="/nucl-prot"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex font-semibold items-center justify-center text-[32px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
           Nucleotide Protonation
           <br/>
@@ -22,7 +22,7 @@ export default function BioInst() {
         </Link>
         <Link
           to="/det-rate"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex font-semibold items-center justify-center text-[30px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
           Rate Constant for Proton 
           <br/>

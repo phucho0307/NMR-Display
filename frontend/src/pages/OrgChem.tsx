@@ -22,7 +22,7 @@ export default function OrgChem() {
         </Link>
         <Link
           to="/stereo"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex font-semibold items-center justify-center text-[35px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
           Stereoselective <br /> Reduction of Camphor
         </Link>
