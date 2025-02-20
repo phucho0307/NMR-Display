@@ -34,9 +34,9 @@ export const NMRSpectrum: NMRSpectrumType = [
     description: `
       <ol class="list-decimal pl-20 text-[40px] text-[#FEFCFC] flex flex-col gap-10">
         <li><a href="/symentry" class="underline text-[#A5C882] pl-3">Symentry<a /></li>
-        <li><a class="underline text-[#A5C882] pl-3">Chemical Shift<a /></li>
-        <li><a class="underline text-[#A5C882] pl-3">Iintegration<a /></li>
-        <li><a class="underline text-[#A5C882] pl-3">Splitting<a /></li>
+        <li><a href="/chemical-shift" class="underline text-[#A5C882] pl-3">Chemical Shift<a /></li>
+        <li><a href="/integration" class="underline text-[#A5C882] pl-3">Integration<a /></li>
+        <li><a href="/splitting" class="underline text-[#A5C882] pl-3">Splitting<a /></li>
       </ol>
             
         `,

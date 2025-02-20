@@ -30,6 +30,9 @@ import Symentry from "./pages/Symentry";
 import PreCat from "./pages/PreCat";
 import AsymSyn from "./pages/AsymSyn";
 import SynPho from "./pages/SynPho";
+import ChemicalShift from "./pages/ChemicalShift";
+import Integration from "./pages/Integration";
+import Splitting from "./pages/Splitting";
 
 function App() {
   return (
@@ -65,6 +68,9 @@ function App() {
           <Route path="asym-syn" element={<AsymSyn />} />
           <Route path="syn-pho" element={<SynPho />} />
           <Route path="symentry" element={<Symentry />} />
+          <Route path="chemical-shift" element={<ChemicalShift />} />;
+          <Route path="integration" element={<Integration />} />
+          <Route path="splitting" element={<Splitting />} />
           <Route path="lig-syn" element={<LigSyn />} />
         </Route>
       </Routes>

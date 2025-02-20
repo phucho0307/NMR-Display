@@ -20,13 +20,19 @@ export default function NMRInstrumentation() {
             <img
               src="/images/CurrentInstrument.png"
               alt="/the current NMR instruments"
-              className="h-[740px]"
+              className="h-[800px] self-start"
             />
           ) : (
             <h2 className="text-[130px] font-bold text-[#A5C882] w-full text-center">
               Size Matter
             </h2>
           )}
+          <div className="flex items-center justify-start text-[#A5C882] text-[30px] font-bold absolute z-[1000000px] bottom-6 left-34">
+            <Link to="/nmr-fundamentals">
+              <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+              <span>Back</span>
+            </Link>
+          </div>
         </div>
         <div className="top-[190px] text-[36px] text-[#FEFCFC] p-8 w-1/2">
           <p className="font-serif">
@@ -54,12 +60,6 @@ export default function NMRInstrumentation() {
             stay focused and follow all operating instructions.
           </p>
         </div>
-      </div>
-      <div className="flex items-center justify-start text-[#A5C882] text-[30px] font-bold pl-32">
-        <Link to="/nmr-fundamentals">
-          <ArrowBackIosIcon sx={{ fontSize: 55 }} />
-          <span>Back</span>
-        </Link>
       </div>
     </main>
   );

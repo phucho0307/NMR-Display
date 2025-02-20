@@ -3,7 +3,6 @@ import { Link } from "react-router";
 export default function NMRFundamentals() {
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
-      <p className="text-[#0C0C31]">hi, used to "create" the page</p>
       <p className="absolute text-[#A5C882] text-[210px] font-bold top-[190px] left-[430px]">
         NUCLEAR
       </p>
@@ -45,7 +44,7 @@ export default function NMRFundamentals() {
           Diagram of <br/> Componets
         </Link>
       </div>
-      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+      <h1 className="absolute text-[#A5C882] text-[65px] font-semibold top-[35px] left-[230px]">
         NMR Fundamentals
       </h1>
 
