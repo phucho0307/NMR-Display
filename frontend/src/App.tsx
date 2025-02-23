@@ -22,7 +22,7 @@ import SpecialThanks from "./pages/SpecialThanks";
 import SpecLab from "./pages/SpecLab";
 import Stereo from "./pages/Stereo";
 import ThreeWeek from "./pages/ThreeWeek";
-import Yeast from "./pages/Yeast"; // why
+import Yeast from "./pages/Yeast"; // Why: Yeast-related project page.
 import NuclProt from "./pages/NuclProt";
 import DetRate from "./pages/DetRate";
 import LigSyn from "./pages/LigSyn";
@@ -34,11 +34,27 @@ import ChemicalShift from "./pages/ChemicalShift";
 import Integration from "./pages/Integration";
 import Splitting from "./pages/Splitting";
 
-function App() {
+/**
+ * The main application component that defines routing structure.
+ *
+ * @component
+ * @returns {JSX.Element} The application's routing structure wrapped in `Layout`.
+ *
+ * Description:
+ * - Uses `react-router-dom` for client-side navigation.
+ * - Defines all page routes inside a `Layout` wrapper.
+ *
+ * How to Modify:
+ * - To add a new route, import the corresponding page component and add a `<Route>` inside the `Layout`.
+ * - To remove a route, delete the corresponding `<Route>` entry.
+ * - Ensure all imported page components exist in the `pages` directory to prevent errors.
+ */
+function App(): JSX.Element {
   return (
     <>
       <Routes>
         <Route element={<Layout />}>
+          {/* Main Pages */}
           <Route index element={<Home />} />
           <Route path="how-it-works" element={<HowItWorks />} />
           <Route path="nmr-fundamentals" element={<NMRFundamentals />} />
@@ -52,23 +68,28 @@ function App() {
           <Route path="org-chem" element={<OrgChem />} />
           <Route path="bio-inst" element={<BioInst />} />
           <Route path="adv-syn" element={<AdvSyn />} />
+          {/* Individual People Pages */}
           <Route path="katie" element={<Katie />} />
           <Route path="diana" element={<Diana />} />
           <Route path="helen" element={<Helen />} />
+          {/* General Information Pages */}
           <Route path="about" element={<About />} />
           <Route path="credits" element={<Credits />} />
           <Route path="special-thanks" element={<SpecialThanks />} />
+          {/* Specialized Laboratory & Research Topics */}
           <Route path="spec-lab" element={<SpecLab />} />
           <Route path="stereo" element={<Stereo />} />
           <Route path="3-week" element={<ThreeWeek />} />
-          <Route path="yeast" element={<Yeast />} />
+          <Route path="yeast" element={<Yeast />} />{" "}
+          {/* Yeast-related research page */}
           <Route path="nucl-prot" element={<NuclProt />} />
           <Route path="det-rate" element={<DetRate />} />
           <Route path="pre-cat" element={<PreCat />} />
           <Route path="asym-syn" element={<AsymSyn />} />
           <Route path="syn-pho" element={<SynPho />} />
           <Route path="symentry" element={<Symentry />} />
-          <Route path="chemical-shift" element={<ChemicalShift />} />;
+          {/* Chemistry-Specific Topics */}
+          <Route path="chemical-shift" element={<ChemicalShift />} />
           <Route path="integration" element={<Integration />} />
           <Route path="splitting" element={<Splitting />} />
           <Route path="lig-syn" element={<LigSyn />} />
