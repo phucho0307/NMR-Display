@@ -1,22 +1,21 @@
 @import "tailwindcss";
 
+/* Prevents text selection */
 * {
-  user-select: none; /* Prevents text selection */
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  overflow: auto; /* Ensures scrolling still works */
-  touch-action: pan-y; /* Enables vertical scrolling */
 }
 
 /* Customize scrollbar */
 .scrollbar-custom::-webkit-scrollbar {
-  width: 20px; /* Adjust width */
+  width: 60px; /* Adjust width */
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
   background: #a5c882; /* Scrollbar color */
-  border-radius: 10px; /* Rounded edges */
+  border-radius: 40px; /* Rounded edges */
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
