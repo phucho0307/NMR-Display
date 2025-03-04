@@ -1,5 +1,12 @@
-// import { useState } from "react";
-
+/**
+ * Diagram component renders the page for the NMR diagram.
+ *
+ * This component displays a diagram of NMR components and several buttons
+ * that send API requests when clicked. Each button corresponds to a different
+ * component of the NMR diagram.
+ *
+ * @returns {JSX.Element} The JSX code for the Diagram page.
+ */
 export default function Diagram() {
   // 3 divs aligned horizontally
   // div 1 + 3 are the buttons on the left and right
@@ -8,13 +15,20 @@ export default function Diagram() {
 
   // const [response, setResponse] = useState(null);
 
-  const handleClick = async () => {};
+  /**
+   * Handles the button click event to send an API request.
+   *
+   * @async
+   */
+  const handleClick = async () => {
+    // Implement the API request logic here
+  };
 
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
       <div className="absolute w-full h-[900px] flex items-center justify-center">
         <img
-          src="/public/images/NMRDiagramPlaceholder.png"
+          src="/images/NMRDiagramPlaceholder.png"
           alt="NMR diagram"
           className="h-[873.8px] w-[530.4px]"
         ></img>
@@ -23,7 +37,6 @@ export default function Diagram() {
         Diagram of Components
       </h1>
 
-
       <div>
         <button
           onClick={handleClick}
@@ -31,6 +44,7 @@ export default function Diagram() {
         >
           All Components
         </button>
+        {/* Here it is used to send an API request for all components */}
 
         <button
           onClick={handleClick}
@@ -38,13 +52,15 @@ export default function Diagram() {
         >
           The Magnet
         </button>
-         
+        {/* Here it is used to send an API request for the magnet component */}
+
         <button
           onClick={handleClick}
           className="absolute top-[620px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Liquid Nitrogen
         </button>
+        {/* Here it is used to send an API request for the liquid nitrogen component */}
 
         <button
           onClick={handleClick}
@@ -52,6 +68,7 @@ export default function Diagram() {
         >
           Liquid Helium
         </button>
+        {/* Here it is used to send an API request for the liquid helium component */}
 
         <button
           onClick={handleClick}
@@ -59,6 +76,7 @@ export default function Diagram() {
         >
           The Sample
         </button>
+        {/* Here it is used to send an API request for the sample component */}
 
         <button
           onClick={handleClick}
@@ -66,13 +84,15 @@ export default function Diagram() {
         >
           Mylar
         </button>
+        {/* Here it is used to send an API request for the mylar component */}
 
         <button
           onClick={handleClick}
           className="absolute top-[620px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
-          Shim Colis
+          Shim Coils
         </button>
+        {/* Here it is used to send an API request for the shim coils component */}
 
         <button
           onClick={handleClick}
@@ -80,6 +100,7 @@ export default function Diagram() {
         >
           The Pulse
         </button>
+        {/* Here it is used to send an API request for the pulse component */}
       </div>
     </main>
   );

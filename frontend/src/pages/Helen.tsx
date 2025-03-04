@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * Helen component renders the page for Dr. Helen Hoyt's research.
+ *
+ * This component displays information about Dr. Hoyt's research in Green Chemistry.
+ * It includes a title, an image, a description, and a link to navigate back to the
+ * previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the Helen page.
+ */
 export default function Helen() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
-        Faculty Research
+        Dr. Helen Hoyt
       </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
@@ -22,7 +31,7 @@ export default function Helen() {
           </h2>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC] overflow-y-auto px-4 scrollbar-custom flex flex-col gap-16 h-[600px]">
             <p>
-              SDr. Hoyt’s research resides primarily in the area of Green
+              Dr. Hoyt’s research resides primarily in the area of Green
               Chemistry by synthesis of Inorganic / Organometallic catalysts to
               form desirable Organic products.
             </p>
@@ -42,6 +51,7 @@ export default function Helen() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Faculty Research page */}
             </div>
           </div>
         </div>

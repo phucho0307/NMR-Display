@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * Yeast component renders the page for the yeast fermentation project.
+ *
+ * This component displays information about the use of 13C NMR spectroscopy to follow
+ * the formation of fermentation products over time. It includes a title, an image,
+ * a description, and a link to navigate back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the Yeast page.
+ */
 export default function Yeast() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -33,6 +42,7 @@ export default function Yeast() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Biological Instrumentation page */}
             </div>
           </div>
         </div>
@@ -40,4 +50,3 @@ export default function Yeast() {
     </main>
   );
 }
-

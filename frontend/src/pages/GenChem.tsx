@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * GenChem component renders the page for the general chemistry project.
+ *
+ * This component displays information about the use of 13C NMR spectroscopy
+ * in general chemistry. It includes a title, an image, a description, and a link
+ * to navigate back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the GenChem page.
+ */
 export default function GenChem() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
-      <h1 className="absolute top-[10px] left-[200px] text-[#A5C882] text-[70px] font-semibold">
+      <h1 className="absolute top-[38px] left-[237px] text-[#A5C882] text-[70px] font-semibold">
         General Chemistry
       </h1>
       <div className="flex gap-10">
@@ -35,6 +44,7 @@ export default function GenChem() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Course Usage page */}
             </div>
           </div>
         </div>

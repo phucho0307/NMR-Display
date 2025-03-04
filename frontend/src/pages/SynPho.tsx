@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * SynPho component renders the page for the synthesis of phosphorus derivatives project.
+ *
+ * This component displays information about the synthesis of phosphorus derivatives of castor
+ * and lesquerella oils. It includes a title, an image, a description, and a link to navigate back
+ * to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the SynPho page.
+ */
 export default function SynPho() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -36,6 +45,7 @@ export default function SynPho() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Diana page */}
             </div>
           </div>
         </div>

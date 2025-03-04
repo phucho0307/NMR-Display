@@ -1,5 +1,18 @@
 import { Link } from "react-router";
 
+/**
+ * AboutProj component that displays the main project about page.
+ *
+ * This component provides a brief introduction to the NMR project with large, bold text
+ * and navigation links to other sections of the project. It uses absolute positioning
+ * and specific CSS classes to achieve the desired layout and styling.
+ *
+ * The `Link` component from `react-router` is used to create navigation links that allow
+ * users to navigate to different pages within the application without causing a full page reload.
+ * Here it is used to navigate to the About, Credits, and Special Thanks pages.
+ *
+ * @returns {JSX.Element} The rendered AboutProj page.
+ */
 export default function AboutProj() {
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
@@ -40,13 +53,13 @@ export default function AboutProj() {
           to="/special-thanks"
           className="flex font-semibold items-center justify-center text-[40px]  w-[390px] h-[100px] rounded bg-[#080821] text-center"
         >
-          Special Thanks 
+          Special Thanks
         </Link>
       </div>
 
-      <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
         About this Project
-      </p>
+      </h1>
     </main>
   );
 }

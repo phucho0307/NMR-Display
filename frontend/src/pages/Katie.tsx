@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * Katie component renders the page for Dr. Katie Adelsberger's research.
+ *
+ * This component displays information about Dr. Adelsberger's research on soil phosphorus.
+ * It includes a title, an image, a description, and a link to navigate back to the
+ * previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the Katie page.
+ */
 export default function Katie() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
-        Biological Instrumentation
+        Dr. Katie Adelsberger
       </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
@@ -26,7 +35,7 @@ export default function Katie() {
               of soil phosphorus in prairie soils in order to determine the
               primary controls on phosphorus availability. Available forms may
               be affected by processes such as prairie burns, erosion, and
-              animal manuring. Here, we see a student taking a core sample.This
+              animal manuring. Here, we see a student taking a core sample. This
               graph shows the phosphorus results from samples captured from
               different prairies at Green Oaks. As you can see, all levels of
               phosphorus are the same for each prairie.
@@ -38,6 +47,7 @@ export default function Katie() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Faculty Research page */}
             </div>
           </div>
         </div>
@@ -45,6 +55,3 @@ export default function Katie() {
     </main>
   );
 }
-
-
-
