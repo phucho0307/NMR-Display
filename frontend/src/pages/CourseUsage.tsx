@@ -1,5 +1,13 @@
 import { Link } from "react-router";
 
+/**
+ * CourseUsage component renders the page for the course usage projects.
+ *
+ * This component displays a title and several links to different course usage
+ * projects. Each link navigates to a specific project page.
+ *
+ * @returns {JSX.Element} The JSX code for the CourseUsage page.
+ */
 export default function CourseUsage() {
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
@@ -32,6 +40,7 @@ export default function CourseUsage() {
           <br />
           Chemistry
         </Link>
+        {/* Here it is used to link to the General Chemistry page */}
         <Link
           to="/org-chem"
           className="flex font-semibold text-[40px] px-15 py-[10px] justify-between rounded bg-[#080821] text-center"
@@ -40,18 +49,21 @@ export default function CourseUsage() {
           <br />
           Chemistry
         </Link>
+        {/* Here it is used to link to the Organic Chemistry page */}
         <Link
           to="/bio-inst"
           className="flex font-semibold text-[40px] px-[60px] py-[8px] justify-between rounded bg-[#080821] text-center"
         >
           Biological <br /> Instrumentation
         </Link>
+        {/* Here it is used to link to the Biological Instrumentation page */}
         <Link
-          to="/adv-syn"  
+          to="/adv-syn"
           className="flex font-semibold text-[40px] px-15 py-[8px] justify-between rounded bg-[#080821] text-center"
         >
           Advanced <br /> Synthesis
         </Link>
+        {/* Here it is used to link to the Advanced Synthesis page */}
       </div>
 
       <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">

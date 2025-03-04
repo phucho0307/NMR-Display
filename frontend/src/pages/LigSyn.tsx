@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * LigSyn component renders the page for the ligand synthesis project.
+ *
+ * This component displays information about ligand synthesis in advanced synthesis.
+ * It includes a title, an image, a description, and a link to navigate back to the
+ * previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the LigSyn page.
+ */
 export default function LigSyn() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -34,6 +43,7 @@ export default function LigSyn() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Advanced Synthesis page */}
             </div>
           </div>
         </div>

@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * SpecialThanks component renders the page for acknowledging contributors to the project.
+ *
+ * This component displays a list of people and organizations who contributed to the project.
+ * It includes a title, a description, and a link to navigate back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the SpecialThanks page.
+ */
 export default function SpecialThanks() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -94,6 +102,7 @@ export default function SpecialThanks() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the About Project page */}
             </div>
           </div>
         </div>
