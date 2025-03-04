@@ -13,6 +13,8 @@ import NMRSpectrumOfMethanol from "../components/NMRSpectrumOfMethanol";
 import TwoPeaks from "../components/TwoPeaks";
 import ShorterPeaks from "../components/ShorterPeaks";
 import TallerPeaks from "../components/TallerPeaks";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { Link } from "react-router";
 
 /**
  * Renders the "How It Works" interactive component with navigation controls.
@@ -62,7 +64,7 @@ export default function HowItWorksComponent(): React.ReactElement {
   const handlePrev = () => {
     setShowComponent(false);
     setCurrentIndex(
-      (prev) => (prev - 1 + HowItWorks.length) % HowItWorks.length,
+      (prev) => (prev - 1 + HowItWorks.length) % HowItWorks.length
     );
   };
 
@@ -87,7 +89,7 @@ export default function HowItWorksComponent(): React.ReactElement {
 
   // Finds the current component based on the componentNumber.
   const currentComponent = componentMapping.find(
-    (item) => item.id === componentNumber,
+    (item) => item.id === componentNumber
   );
 
   /**
@@ -114,7 +116,7 @@ export default function HowItWorksComponent(): React.ReactElement {
 
     return () => {
       buttons.forEach((button) =>
-        button.removeEventListener("click", handleClick),
+        button.removeEventListener("click", handleClick)
       );
     };
   }, [currentIndex]);
@@ -147,7 +149,13 @@ export default function HowItWorksComponent(): React.ReactElement {
       </div>
 
       {/* Navigation buttons */}
-      <div className="flex gap-10 items-center">
+      <div className="flex gap-10 items-center w-full px-20">
+        <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start mr-145">
+          <Link to="/">
+            <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+            <span>Back</span>
+          </Link>
+        </div>
         <button
           onClick={handlePrev}
           className="hover:scale-110 transition-transform"

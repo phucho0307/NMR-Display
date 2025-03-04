@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function NMRFundamentals() {
   return (
@@ -35,20 +36,29 @@ export default function NMRFundamentals() {
           to="/interpreting"
           className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
-          Interpreting<br/>NMR Spectrum
+          Interpreting
+          <br />
+          NMR Spectrum
         </Link>
-        < Link
+        <Link
           to="/diagram"
           className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
         >
-          Diagram of <br/> Componets
+          Diagram of <br /> Componets
         </Link>
+      </div>
+      {/* Navigation buttons */}
+      <div className="flex gap-10 items-center w-full px-20">
+        <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start mr-145">
+          <Link to="/">
+            <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+            <span>Back</span>
+          </Link>
+        </div>
       </div>
       <h1 className="absolute text-[#A5C882] text-[65px] font-semibold top-[35px] left-[230px]">
         NMR Fundamentals
       </h1>
-
-      
     </main>
   );
 }
