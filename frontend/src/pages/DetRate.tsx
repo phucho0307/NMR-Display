@@ -13,9 +13,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function DetRate() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
-      <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
-        Biological Instrumentation
-      </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
           <img

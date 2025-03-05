@@ -54,9 +54,6 @@ export default function FacultyResearch() {
         </Link>
         {/* Here it is used to link to the Helen Hoyt page */}
       </div>
-      <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
-        Faculty Research
-      </p>
     </main>
   );
 }

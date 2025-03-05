@@ -65,10 +65,6 @@ export default function CourseUsage() {
         </Link>
         {/* Here it is used to link to the Advanced Synthesis page */}
       </div>
-
-      <p className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
-        Course Usage
-      </p>
     </main>
   );
 }

@@ -67,9 +67,6 @@ export default function NMRFundamentals() {
           </Link>
         </div>
       </div>
-      <h1 className="absolute text-[#A5C882] text-[65px] font-semibold top-[35px] left-[230px]">
-        NMR Fundamentals
-      </h1>
     </main>
   );
 }

@@ -61,9 +61,6 @@ export default function Interpreting() {
 
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px] flex flex-col items-center">
-      <h1 className="absolute text-[#A5C882] text-[60px] font-semibold top-[40px] left-[240px]">
-        NMR Instrumentation
-      </h1>
 
       {/* Main content section */}
       <div className="flex justify-center items-center w-full p-10 h-[790px]">

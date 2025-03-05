@@ -56,10 +56,6 @@ export default function AboutProj() {
           Special Thanks
         </Link>
       </div>
-
-      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
-        About this Project
-      </h1>
     </main>
   );
 }
