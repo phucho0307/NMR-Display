@@ -1,32 +1,42 @@
+/**
+ * NMRFundamentals Component
+ *
+ * This component renders a responsive page for the "NMR Fundamentals" section.
+ * It dynamically adjusts to different screen sizes using Tailwind CSS.
+ *
+ * Key Features:
+ * - Uses `flexbox` for layout responsiveness.
+ * - Adjusts text sizes and spacing for different screen sizes.
+ * - Provides navigation links to related sections.
+ * - Includes a back button for easy navigation.
+ */
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function NMRFundamentals() {
   return (
-    <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
-      <p className="absolute text-[#A5C882] text-[210px] font-bold top-[190px] left-[430px]">
-        NUCLEAR
-      </p>
-      <p className="absolute text-[#A5C882] text-[210px] font-bold top-[359px] left-[605px]">
-        MAGNETIC
-      </p>
-      <p className="absolute text-[#A5C882] text-[210px] font-bold top-[526px] left-[335px]">
-        RESONACE
-      </p>
-      <p className="absolute text-[#FEFCFC] text-[210px] font-bold top-[190px] left-[430px]">
-        N
-      </p>
-      <p className="absolute text-[#FEFCFC] text-[210px] font-bold top-[359px] left-[605px]">
-        M
-      </p>
-      <p className="absolute text-[#FEFCFC] text-[210px] font-bold top-[526px] left-[335px]">
-        R
-      </p>
+    <main className="bg-[#0C0C31] flex flex-col items-center px-4">
+      {/* Title Section */}
+      <div className="w-full text-left pt-15 pb-10">
+        <p className="text-[#A5C882] font-bold text-[200px] leading-45 ml-120">
+          <span className="text-white">N</span>
+          UCLEAR
+        </p>
+        <p className="text-[#A5C882] font-bold text-[200px] leading-45 ml-55 text-center">
+          <span className="text-white">M</span>
+          AGNETIC
+        </p>
+        <p className="text-[#A5C882] font-bold text-[200px] leading-45 text-center">
+          <span className="text-white">R</span>
+          ESONANCE
+        </p>
+      </div>
 
-      <div className="absolute top-[831px] flex space-x-[76px] w-[1920px] justify-center">
+      {/* Navigation Links */}
+      <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/nmr-instrumentation"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
         >
           NMR
           <br />
@@ -34,7 +44,7 @@ export default function NMRFundamentals() {
         </Link>
         <Link
           to="/interpreting"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
         >
           Interpreting
           <br />
@@ -42,23 +52,24 @@ export default function NMRFundamentals() {
         </Link>
         <Link
           to="/diagram"
-          className="flex font-semibold items-center justify-center text-[40px]  w-[395px] h-[140px] rounded bg-[#080821] text-center"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
         >
-          Diagram of <br /> Componets
+          Diagram of
+          <br />
+          Components
         </Link>
       </div>
-      {/* Navigation buttons */}
-      <div className="flex gap-10 items-center w-full px-20">
-        <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start mr-145">
-          <Link to="/">
-            <ArrowBackIosIcon sx={{ fontSize: 55 }} />
-            <span>Back</span>
-          </Link>
-        </div>
+
+      {/* Back Button */}
+      <div className="flex items-center justify-center w-full mt-10">
+        <Link
+          to="/"
+          className="flex items-center text-[#A5C882] text-[5vw] md:text-[30px] font-bold"
+        >
+          <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+          <span>Back</span>
+        </Link>
       </div>
-      <h1 className="absolute text-[#A5C882] text-[65px] font-semibold top-[35px] left-[230px]">
-        NMR Fundamentals
-      </h1>
     </main>
   );
 }
