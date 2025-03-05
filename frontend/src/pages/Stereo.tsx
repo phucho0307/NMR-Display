@@ -13,9 +13,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function Stereo() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
-      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
-        Organic Chemistry
-      </h1>
       <div className="flex gap-10">
         <img
           src="/images/chemistry-lab-40156.png"

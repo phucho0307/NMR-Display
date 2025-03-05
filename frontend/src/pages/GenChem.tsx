@@ -13,9 +13,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function GenChem() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
-      <h1 className="absolute top-[38px] left-[237px] text-[#A5C882] text-[70px] font-semibold">
-        General Chemistry
-      </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
           <img

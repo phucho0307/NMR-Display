@@ -24,9 +24,6 @@ export default function NMRInstrumentation() {
 
   return (
     <main className="bg-[#0C0C31] w-full h-[922px] flex flex-col p-8">
-      <h1 className="absolute text-[#A5C882] text-[60px] font-semibold top-[38px] left-[237px]">
-        NMR Instrumentation
-      </h1>
       <div className="flex">
         <div className="w-1/2 flex items-center">
           {showImage ? (

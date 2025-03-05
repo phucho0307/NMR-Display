@@ -99,9 +99,6 @@ export default function Credits() {
 
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10 text-white">
-      <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[60px] font-semibold">
-        About this Project
-      </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
           <img

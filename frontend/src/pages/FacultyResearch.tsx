@@ -61,7 +61,6 @@ export default function FacultyResearch() {
           Helen Hoyt, PhD
         </Link>
       </div>
-
       {/* Back Button */}
       <div className="flex items-center justify-center w-full mt-10">
         <Link

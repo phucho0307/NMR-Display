@@ -12,9 +12,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function SpecialThanks() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
-      <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
-        About this Project
-      </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
           <h2 className="text-[150px] font-bold text-[#A5C882] absolute top-[430px] left-[130px]">

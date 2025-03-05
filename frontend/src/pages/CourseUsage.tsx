@@ -79,7 +79,6 @@ export default function CourseUsage() {
         </Link>
         {/* Here it is used to link to the Advanced Synthesis page */}
       </div>
-
       {/* Back Button */}
       <div className="flex items-center justify-center w-full mt-10">
         <Link
