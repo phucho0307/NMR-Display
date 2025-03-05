@@ -113,7 +113,7 @@ export default function Credits() {
             {accordionData.map((item, index) => (
               <div key={index} className="border-b border-gray-500 pb-4">
                 <button
-                  className="text-[48px] flex justify-between items-center w-full text-left text-[#A5C882] hover:text-white transition-all duration-300"
+                  className="text-[48px] flex justify-between items-center w-full text-left text-white hover:text-white transition-all duration-300"
                   onClick={() => handleClick(index)}
                 >
                   {item.title}
