@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * NuclProt component renders the page for the nucleotide protonation state and metal binding project.
+ *
+ * This component displays information about how the protonation state of the ATP nucleotide influences
+ * the binding of Magnesium Cation. It includes a title, an image, a description, and a link to navigate
+ * back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the NuclProt page.
+ */
 export default function NuclProt() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -34,6 +43,7 @@ export default function NuclProt() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Biological Instrumentation page */}
             </div>
           </div>
         </div>
@@ -41,5 +51,3 @@ export default function NuclProt() {
     </main>
   );
 }
-
-

@@ -13,6 +13,19 @@
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * AboutProj component that displays the main project about page.
+ *
+ * This component provides a brief introduction to the NMR project with large, bold text
+ * and navigation links to other sections of the project. It uses absolute positioning
+ * and specific CSS classes to achieve the desired layout and styling.
+ *
+ * The `Link` component from `react-router` is used to create navigation links that allow
+ * users to navigate to different pages within the application without causing a full page reload.
+ * Here it is used to navigate to the About, Credits, and Special Thanks pages.
+ *
+ * @returns {JSX.Element} The rendered AboutProj page.
+ */
 export default function AboutProj() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">

@@ -13,6 +13,14 @@
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * NMRFundamentals component renders the page for NMR fundamentals.
+ *
+ * This component displays the title "Nuclear Magnetic Resonance" and several links
+ * to different NMR fundamentals topics. Each link navigates to a specific topic page.
+ *
+ * @returns {JSX.Element} The JSX code for the NMRFundamentals page.
+ */
 export default function NMRFundamentals() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
@@ -42,6 +50,7 @@ export default function NMRFundamentals() {
           <br />
           Instrumentation
         </Link>
+        {/* Here it is used to link to the NMR Instrumentation page */}
         <Link
           to="/interpreting"
           className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
@@ -50,6 +59,7 @@ export default function NMRFundamentals() {
           <br />
           NMR Spectrum
         </Link>
+        {/* Here it is used to link to the Interpreting NMR Spectrum page */}
         <Link
           to="/diagram"
           className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
@@ -58,6 +68,7 @@ export default function NMRFundamentals() {
           <br />
           Components
         </Link>
+        {/* Here it is used to link to the Diagram of Components page */}
       </div>
 
       {/* Back Button */}

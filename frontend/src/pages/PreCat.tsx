@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
-export default function DetRate() {
+/**
+ * PreCat component renders the page for the precatalyst synthesis project.
+ *
+ * This component displays information about the synthesis of precatalysts by binding
+ * synthesized ligands to iron(II) bromide. It includes a title, an image, a description,
+ * and a link to navigate back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the PreCat page.
+ */
+export default function PreCat() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
@@ -35,6 +44,7 @@ export default function DetRate() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Advanced Synthesis page */}
             </div>
           </div>
         </div>
@@ -42,6 +52,3 @@ export default function DetRate() {
     </main>
   );
 }
-
-
-

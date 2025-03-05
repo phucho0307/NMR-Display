@@ -2,9 +2,22 @@ import { useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { Link } from "react-router";
 
+/**
+ * NMRInstrumentation component renders the page for NMR instrumentation.
+ *
+ * This component displays information about the NMR instruments, including their
+ * size and magnet strength. It includes a title, an image, a description, and a link
+ * to navigate back to the previous page. The component also has a button to toggle
+ * the display of an image of the current NMR instrument.
+ *
+ * @returns {JSX.Element} The JSX code for the NMRInstrumentation page.
+ */
 export default function NMRInstrumentation() {
   const [showImage, setShowImage] = useState(false);
 
+  /**
+   * Handles the button click event to toggle the display of the current NMR instrument image.
+   */
   function handleShowImage() {
     setShowImage(!showImage);
   }
@@ -27,14 +40,15 @@ export default function NMRInstrumentation() {
               Size Matter
             </h2>
           )}
-          <div className="flex items-center justify-start text-[#A5C882] text-[30px] font-bold absolute z-[1000000px] bottom-6 left-34">
+          <div className="flex items-center justify-start text-[#A5C882] text-[30px] font-bold absolute z-[1000000px] bottom-8 left-34">
             <Link to="/nmr-fundamentals">
               <ArrowBackIosIcon sx={{ fontSize: 55 }} />
               <span>Back</span>
             </Link>
+            {/* Here it is used to link to the NMR Fundamentals page */}
           </div>
         </div>
-        <div className="top-[190px] text-[36px] text-[#FEFCFC] p-8 w-1/2">
+        <div className="top-[180px] text-[34px] text-[#FEFCFC] p-8 w-1/2">
           <p className="font-serif">
             NMR instruments vary in size according to magnet strength, reported
             in megahertz (MHz).

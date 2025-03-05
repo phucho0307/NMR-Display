@@ -13,6 +13,14 @@
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * FacultyResearch component renders the page for faculty research projects.
+ *
+ * This component displays a title and several links to different faculty research
+ * projects. Each link navigates to a specific faculty member's research page.
+ *
+ * @returns {JSX.Element} The JSX code for the FacultyResearch page.
+ */
 export default function FacultyResearch() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">

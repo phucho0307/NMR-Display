@@ -13,6 +13,14 @@
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * OrgChem component renders the page for the organic chemistry projects.
+ *
+ * This component displays a title and several links to different organic chemistry
+ * projects. Each link navigates to a specific project page.
+ *
+ * @returns {JSX.Element} The JSX code for the OrgChem page.
+ */
 export default function OrgChem() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
@@ -35,6 +43,7 @@ export default function OrgChem() {
           <br />
           Unknown Lab
         </Link>
+        {/* Here it is used to link to the Spectroscopy Unknown Lab page */}
         <Link
           to="/3-week"
           className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
@@ -43,12 +52,14 @@ export default function OrgChem() {
           <br />
           Synthesis Project
         </Link>
+        {/* Here it is used to link to the 3-Week Lab Synthesis Project page */}
         <Link
           to="/stereo"
           className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
         >
           Stereoselective <br /> Reduction of Camphor
         </Link>
+        {/* Here it is used to link to the Stereoselective Reduction of Camphor page */}
       </div>
 
       {/* Back Button */}

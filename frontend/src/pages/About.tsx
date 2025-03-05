@@ -1,18 +1,31 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * About component that displays information about the NMR project.
+ *
+ * This component provides a detailed description of the NMR project, including its history,
+ * the people involved, and the purpose of the project. It uses various HTML elements and
+ * CSS classes to structure and style the content.
+ *
+ * The `Link` component from `react-router-dom` is used to create navigation links that allow
+ * users to navigate to different pages within the application without causing a full page reload.
+ * Here it is used to navigate back to the About Project page.
+ *
+ * @returns {JSX.Element} The rendered About page.
+ */
 export default function About() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
-      <h1 className="absolute top-[50px] left-[220px] text-[#A5C882] text-[50px] font-semibold">
-        About this Project
+      <h1 className="absolute text-[#A5C882] text-[70px] font-semibold top-[35px] left-[237px]">
+        About
       </h1>
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
             src="/images/NMR-large.png"
-            alt=""
-            className="h-[840px] w-full"
+            alt="Project Visual"
+            className="h-[840px] w-full rounded-lg shadow-lg object-contain"
           />
         </div>
 

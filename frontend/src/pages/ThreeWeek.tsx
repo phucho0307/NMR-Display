@@ -1,6 +1,15 @@
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * ThreeWeek component renders the page for the 3-week synthesis project.
+ *
+ * This component displays information about the use of 1H and 13C NMR spectroscopy
+ * to characterize reaction products during a 3-week synthesis project. It includes
+ * a title, an image, a description, and a link to navigate back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the ThreeWeek page.
+ */
 export default function ThreeWeek() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -29,10 +38,10 @@ export default function ThreeWeek() {
               <ArrowBackIosIcon sx={{ fontSize: 55 }} />
               <span>Back</span>
             </Link>
+            {/* Here it is used to link to the Organic Chemistry page */}
           </div>
         </div>
       </div>
     </main>
   );
 }
-

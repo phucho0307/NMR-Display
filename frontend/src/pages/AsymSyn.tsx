@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * AsymSyn component renders the page for the asymmetric synthesis project.
+ *
+ * This component displays information about the asymmetric synthesis of camphor-based
+ * sulfonyl imines and ketones. It includes a title, an image, a description, and a link
+ * to navigate back to the previous page.
+ *
+ * @returns {JSX.Element} The JSX code for the AsymSyn page.
+ */
 export default function AsymSyn() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
@@ -36,6 +45,7 @@ export default function AsymSyn() {
                 <ArrowBackIosIcon sx={{ fontSize: 55 }} />
                 <span>Back</span>
               </Link>
+              {/* Here it is used to link to the Diana page */}
             </div>
           </div>
         </div>

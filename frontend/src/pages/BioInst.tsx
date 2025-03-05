@@ -13,6 +13,14 @@
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+/**
+ * BioInst component renders the page for the biological instrumentation projects.
+ *
+ * This component displays a title and several links to different biological instrumentation
+ * projects. Each link navigates to a specific project page.
+ *
+ * @returns {JSX.Element} The JSX code for the BioInst page.
+ */
 export default function BioInst() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
@@ -35,6 +43,7 @@ export default function BioInst() {
           <br />
           Fermentation
         </Link>
+        {/* Here it is used to link to the Yeast Fermentation page */}
         <Link
           to="/nucl-prot"
           className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
@@ -43,6 +52,7 @@ export default function BioInst() {
           <br />
           State and Metal Binding
         </Link>
+        {/* Here it is used to link to the Nucleotide Protonation State and Metal Binding page */}
         <Link
           to="/det-rate"
           className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
@@ -51,6 +61,7 @@ export default function BioInst() {
           <br />
           Exchange in Thiamine
         </Link>
+        {/* Here it is used to link to the Rate Constant for Proton Exchange in Thiamine page */}
       </div>
 
       {/* Back Button */}
