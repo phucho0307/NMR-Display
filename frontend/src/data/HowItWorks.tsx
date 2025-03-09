@@ -1,3 +1,26 @@
+/**
+ * Represents a section in the "How It Works" guide.
+ * Each object contains a title and a description related to an aspect of the technology.
+ *
+ * @interface HowItWorksObject
+ * @property {string} title - The title of the section, describing a key concept.
+ * @property {string} description - The detailed explanation of the concept, which may include HTML for rich formatting.
+ */
+
+/**
+ * An array of `HowItWorksObject` describing various components of the NMR technology.
+ * Each item represents a section with a title and a detailed explanation.
+ *
+ * @type {HowItWorksType}
+ * @example
+ * const exampleHowItWorks = [
+ *   {
+ *     title: "The Technology",
+ *     description: "Detailed explanation of the technology..."
+ *   }
+ * ]
+ */
+
 interface HowItWorksObject {
   title: string;
   description: string;
@@ -19,7 +42,7 @@ export const HowItWorks: HowItWorksType = [
     title: "The Magnet",
     description: `
       <p>Just like an MRI, the heart of the NMR spectrometer is a superconducting magnet.</p> 
-      <p>As long as it is kept sufficiently cold, the electricity flowing in the superconducting wire (and the magnetic field it creates) will continue forever. No batteries or external power required! </p>
+      <p>As long as it is kept sufficiently cold, the electricity flowing in the superconducting wire (and the magnetic field it creates) will continue forever. No batteries or external power required!</p>
       <p>The magnet field strength of this instrument is 6.3 tesla. That’s about 200,000 times more powerful than the magnetic field of the earth!</p>
     `,
   },
@@ -115,7 +138,7 @@ export const HowItWorks: HowItWorksType = [
         <li>
           <p>1. The nuclei within a molecule are in slightly different magnetic environments and so precess at slightly different frequencies.</p>
           <p>For example, consider the two different hydrogen environments in <button data-id="1" id="component-btn" class="underline text-[#A5C882]">methanol:</button></p>
-          <p><button data-id="2" id="component-btn" class="underline text-[#A5C882]">one is attached to oxygen</button> and <button data-id="3" id="component-btn" class="underline text-[#A5C882]">the others are attahced to carbon.</button></p>
+          <p><button data-id="2" id="component-btn" class="underline text-[#A5C882]">one is attached to oxygen</button> and <button data-id="3" id="component-btn" class="underline text-[#A5C882]">the others are attached to carbon.</button></p>
         </li>
         <li>2. The nuclei gradually “relax” back to equilibrium.</li>
       </ol>

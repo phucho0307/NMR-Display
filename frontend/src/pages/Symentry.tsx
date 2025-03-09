@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import { useState, useEffect } from "react";
 import { SymentryData } from "../data/SymentryData";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -17,18 +17,40 @@ import DiethylEther from "../components/DiethlyEther";
 import CH2Graph from "../components/CH2Graph";
 import CH3Graph from "../components/CH3Graph";
 
-export default function Symentry() {
+/**
+ * @fileoverview
+ * The `Symentry` component is responsible for displaying NMR symmetry-related
+ * information, allowing users to toggle between different chemical components.
+ *
+ * @component
+ * @returns {JSX.Element} The Symentry page with interactive elements.
+ */
+export default function Symentry(): JSX.Element {
+  /**
+   * @typedef {Object} ComponentMappingObject
+   * @property {number} id - Unique identifier for the component.
+   * @property {React.ReactNode} component - The corresponding React component.
+   */
   interface ComponentMappingObject {
     id: number;
-    component: React.ReactNode; // Fix: Use React.ReactNode for JSX components
+    component: React.ReactNode; // JSX element representation
   }
 
+  /** @typedef {ComponentMappingObject[]} ComponentMappingType */
   type ComponentMappingType = ComponentMappingObject[];
 
+  /** @state {boolean} showComponent - Controls visibility of selected component. */
   const [showComponent, setShowComponent] = useState(false);
+  /** @state {number | null} componentNumber - Stores the selected component ID. */
   const [componentNumber, setComponentNumber] = useState<number | null>(null);
+
+  /** @constant {Object} currentItem - The default data object displayed initially. */
   const currentItem = SymentryData[0];
 
+  /**
+   * @constant {ComponentMappingType} componentMapping
+   * - Stores mappings between component IDs and their corresponding React components.
+   */
   const componentMapping: ComponentMappingType = [
     { id: 1, component: <Ethanol /> },
     { id: 2, component: <CH2 /> },
@@ -46,13 +68,25 @@ export default function Symentry() {
     { id: 14, component: <CH3Graph /> },
   ];
 
-  // Find the current component based on componentNumber
+  /**
+   * Finds the corresponding React component for the selected `componentNumber`.
+   * @constant {ComponentMappingObject | undefined} currentComponent
+   */
   const currentComponent = componentMapping.find(
     (item) => item.id === componentNumber
   );
+
+  /**
+   * Attaches event listeners to dynamically handle button clicks
+   * that set the selected component.
+   */
   useEffect(() => {
     const buttons = document.querySelectorAll("#component-btn");
 
+    /**
+     * Handles click event for component selection.
+     * @param {Event} event - The event object.
+     */
     const handleClick = (event: Event) => {
       const target = event.target as HTMLButtonElement;
       const componentId = target.getAttribute("data-id");
@@ -73,13 +107,16 @@ export default function Symentry() {
 
   const navigate = useNavigate();
 
+  /**
+   * Handles navigation to the Interpreting component with query parameters.
+   */
   const handleNavigate = () => {
     const componentId = 2;
 
     if (componentId) {
       const selectedIndex = Number(componentId);
 
-      // Navigate to Interpreting component with query params
+      // Navigate to Interpreting component with query parameters
       navigate(`/interpreting?layer=3&index=${selectedIndex}`);
     }
   };
