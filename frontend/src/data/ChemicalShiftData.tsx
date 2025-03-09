@@ -1,9 +1,36 @@
+/**
+ * Represents the concept of Chemical Shift in NMR Spectroscopy.
+ *
+ * A Chemical Shift refers to the variation in the resonance frequency of a nucleus due to its electronic environment. This shift is
+ * observed in an NMR spectrum and is measured in parts per million (ppm). The chemical shift provides insights into the chemical
+ * environment of a nucleus, typically a hydrogen atom in 1H NMR spectroscopy.
+ *
+ * @typedef {Object} ChemicalShiftObject
+ * @property {string} title - The title of the concept being discussed.
+ * @property {string} description - A detailed description explaining the concept with examples.
+ *
+ * @type {ChemicalShiftType} ChemicalShiftType - An array of ChemicalShiftObject, holding all the details related to chemical shifts
+ * in the context of NMR spectroscopy.
+ *
+ * @example
+ * const chemicalShiftExample = {
+ *   title: "Chemical Shift",
+ *   description: "This spectrum of Ethanol illustrates the concept of chemical shift..."
+ * };
+ *
+ * In this example, the chemical shift in a spectrum is described by how the atom's environment influences its magnetic field and
+ * the resulting shift in the spectrum.
+ *
+ * The `ChemicalShiftData` provides a description and practical example of chemical shifts in the context of Ethanol's 1H NMR spectrum.
+ * It explains the role of shielding and deshielding in determining the position of the peak, and how this relates to the chemical
+ * environment of the hydrogen atoms in the molecule.
+ */
 interface ChemicalShiftObject {
-  title: string;
-  description: string;
+  title: string; // The title of the concept
+  description: string; // Detailed explanation and examples of the concept
 }
 
-type ChemicalShiftType = ChemicalShiftObject[];
+type ChemicalShiftType = ChemicalShiftObject[]; // Defines the array structure of the chemical shift data
 
 export const ChemicalShiftData: ChemicalShiftType = [
   {

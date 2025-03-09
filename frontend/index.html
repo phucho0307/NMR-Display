@@ -1,13 +1,58 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!--
+      @fileoverview
+      This is the main HTML file for the NMR Display web application.
+
+      @description
+      - This file serves as the entry point for rendering the React application.
+      - It includes necessary meta tags for character encoding and viewport settings.
+      - A favicon is set for branding.
+      - The root <div> element acts as a container where the React application is mounted.
+      - The main TypeScript module (`/src/main.tsx`) is responsible for bootstrapping the application.
+    -->
+
     <meta charset="UTF-8" />
+
+    <!-- 
+      @meta charset
+      - Specifies UTF-8 encoding to support a wide range of characters.
+    -->
+
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- 
+      @link favicon
+      - Sets a favicon for the application to be displayed in the browser tab.
+    -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+      @meta viewport
+      - Ensures responsive design by setting the width to the device width.
+      - Prevents automatic zooming on mobile devices.
+    -->
+
     <title>NMR Display</title>
+    <!-- 
+      @title
+      - Defines the title of the web application as shown in the browser tab.
+    -->
   </head>
   <body>
     <div id="root"></div>
+    <!-- 
+      @div root
+      - This is the mounting point for the React application.
+      - React components are rendered inside this <div>.
+    -->
+
     <script type="module" src="/src/main.tsx"></script>
+    <!-- 
+      @script main
+      - Loads the main React application script.
+      - Uses ES module syntax for better modularity.
+      - `/src/main.tsx` initializes and renders the React application into `#root`.
+    -->
   </body>
 </html>

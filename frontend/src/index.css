@@ -1,23 +1,39 @@
 @import "tailwindcss";
+/**
+ * @fileoverview
+ * This CSS file includes global styles and customizations for the NMR Display web application.
+ *
+ * @description
+ * - Imports Tailwind CSS for utility-first styling.
+ * - Disables text selection globally to prevent unwanted highlighting.
+ * - Customizes the scrollbar appearance for elements using `.scrollbar-custom`.
+ */
 
-/* Prevents text selection */
+/* Prevents text selection globally */
 * {
   user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  -webkit-user-select: none; /* For WebKit browsers like Chrome & Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer */
 }
 
-/* Customize scrollbar */
+/**
+ * @class scrollbar-custom
+ * @description Applies custom styling to the scrollbar for better aesthetics.
+ */
+
+/* Customize scrollbar width */
 .scrollbar-custom::-webkit-scrollbar {
-  width: 60px; /* Adjust width */
+  width: 60px; /* Sets the scrollbar width */
 }
 
+/* Style the scrollbar thumb (draggable part) */
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background: #a5c882; /* Scrollbar color */
-  border-radius: 40px; /* Rounded edges */
+  background: #a5c882; /* Sets the scrollbar color */
+  border-radius: 40px; /* Gives the scrollbar a rounded look */
 }
 
+/* Style the scrollbar track (background) */
 .scrollbar-custom::-webkit-scrollbar-track {
-  background: #0c0c31; /* Track color */
+  background: #0c0c31; /* Sets the scrollbar track color */
 }

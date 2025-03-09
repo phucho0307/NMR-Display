@@ -1,10 +1,26 @@
+/**
+ * @interface SymentryObject
+ * Represents an object containing the title and description for an NMR symmetry concept.
+ */
 interface SymentryObject {
+  /** The title of the concept */
   title: string;
+  /** The HTML formatted description explaining the concept */
   description: string;
 }
 
+/**
+ * @typedef {SymentryObject[]} SymentryType
+ * Defines an array of symmetry data objects.
+ */
 type SymentryType = SymentryObject[];
 
+/**
+ * @constant {SymentryType} SymentryData
+ * Stores information about NMR symmetry, explaining unique chemical environments and how they appear in the spectrum.
+ * It includes multiple interactive components represented by buttons with `data-id` attributes, which likely correspond to
+ * UI elements that dynamically render based on user interaction.
+ */
 export const SymentryData: SymentryType = [
   {
     title: "Symentry",
