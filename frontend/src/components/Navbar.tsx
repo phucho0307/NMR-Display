@@ -2,14 +2,13 @@ import { Link } from "react-router";
 import { useLocation } from "react-router";
 
 /**
- * Navbar component renders the navigation bar for the application.
+ * Renders the navigation bar for the application.
+ * Displays navigation links to different sections and dynamically updates the title based on the current route.
  *
- * This component displays the navigation links to different sections of the application.
- * It also dynamically updates the title based on the current route.
- *
- * @return {JSX.Element} The JSX code for the Navbar component.
+ * @component
+ * @return {React.ReactElement} The JSX code for the Navbar component.
  */
-export default function Navbar() {
+export default function Navbar(): React.ReactElement {
   const location1 = useLocation();
 
   const Location1 = [
