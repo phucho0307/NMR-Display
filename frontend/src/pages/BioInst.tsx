@@ -37,7 +37,7 @@ export default function BioInst() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/yeast"
-          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Yeast
           <br />
@@ -46,7 +46,7 @@ export default function BioInst() {
         {/* Here it is used to link to the Yeast Fermentation page */}
         <Link
           to="/nucl-prot"
-          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Nucleotide Protonation
           <br />
@@ -55,7 +55,7 @@ export default function BioInst() {
         {/* Here it is used to link to the Nucleotide Protonation State and Metal Binding page */}
         <Link
           to="/det-rate"
-          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Rate Constant for Proton
           <br />

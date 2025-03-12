@@ -30,7 +30,7 @@ export default function AdvSyn() {
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
       {/* Title Section */}
       <div className="w-full text-left pt-15 pb-10">
-        <h1 className="text-[#A5C882] text-[200px] font-bold leading-[260px] text-center ">
+        <h1 className="text-[#A5C882] text-[270px] font-bold leading-[260px] text-center ">
           Advanced
           <br />
           Synthesis
@@ -41,7 +41,7 @@ export default function AdvSyn() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/lig-syn"
-          className="flex flex-col items-center justify-center font-bold text-[40px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Ligand
           <br />
@@ -49,7 +49,7 @@ export default function AdvSyn() {
         </Link>
         <Link
           to="/pre-cat"
-          className="flex flex-col items-center justify-center font-bold text-[40px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Precatalyst
           <br />

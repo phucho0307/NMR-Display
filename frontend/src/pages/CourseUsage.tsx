@@ -44,7 +44,7 @@ export default function CourseUsage() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/gen-chem"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           General
           <br />
@@ -53,7 +53,7 @@ export default function CourseUsage() {
         {/* Here it is used to link to the General Chemistry page */}
         <Link
           to="/org-chem"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Organic
           <br />
@@ -62,7 +62,7 @@ export default function CourseUsage() {
         {/* Here it is used to link to the Organic Chemistry page */}
         <Link
           to="/bio-inst"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Biologoical
           <br />
@@ -71,7 +71,7 @@ export default function CourseUsage() {
         {/* Here it is used to link to the Biological Instrumentation page */}
         <Link
           to="/adv-syn"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Advanced
           <br />

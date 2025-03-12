@@ -7,6 +7,9 @@
  *
  * @returns {JSX.Element} The JSX code for the Diagram page.
  */
+import { Link } from "react-router";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+
 export default function Diagram() {
   // 3 divs aligned horizontally
   // div 1 + 3 are the buttons on the left and right
@@ -37,7 +40,7 @@ export default function Diagram() {
       <div>
         <button
           onClick={handleClick}
-          className="absolute top-[220px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[220px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           All Components
         </button>
@@ -45,7 +48,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[420px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[420px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           The Magnet
         </button>
@@ -53,7 +56,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[620px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[620px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Liquid Nitrogen
         </button>
@@ -61,7 +64,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[820px] left-[170px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[820px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Liquid Helium
         </button>
@@ -69,7 +72,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[220px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[220px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           The Sample
         </button>
@@ -77,7 +80,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[420px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[420px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Mylar
         </button>
@@ -85,7 +88,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[620px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[620px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Shim Coils
         </button>
@@ -93,12 +96,18 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[820px] left-[1450px] bg-[#080821] text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="absolute top-[820px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           The Pulse
         </button>
         {/* Here it is used to send an API request for the pulse component */}
       </div>
+      <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start mr-145 absolute bottom-10 left-16">
+          <Link to="/nmr-fundamentals">
+            <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+            <span>Back</span>
+          </Link>
+        </div>
     </main>
   );
 }

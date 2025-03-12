@@ -7,7 +7,7 @@ import { useLocation } from "react-router";
  * This component displays the navigation links to different sections of the application.
  * It also dynamically updates the title based on the current route.
  *
- * @returns {JSX.Element} The JSX code for the Navbar component.
+ * @return {JSX.Element} The JSX code for the Navbar component.
  */
 export default function Navbar() {
   const location1 = useLocation();
@@ -117,7 +117,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full h-[158px] bg-[#0C0C31] border-b-[4px] border-[#010005] fixed flex items-center justify-between px-10">
+    <nav className="w-full h-[158px] bg-[#0C0C31] border-b-[4px] border-[#536365]/70 fixed flex items-center justify-between px-10">
       <Link to="/" className="text-[#FEFCFC]">
         <img
           src="/images/NMR-Logo.png"
@@ -126,18 +126,22 @@ export default function Navbar() {
         />
       </Link>
 
-      <h1 className="text-[70px] font-bold text-[#A5C882] absolute top-8 left-42">
+      <h1 className="text-[60px] font-bold text-[#A5C882] absolute top-8 left-40">
         {Location.find((item) => item.path === location.pathname)?.title ?? ""}
       </h1>
-      <h1 className="text-[55px] font-bold text-[#A5C882] absolute top-12 left-42">
+      <h1 className="text-[55px] font-bold text-[#A5C882] absolute top-9 left-40">
         {Location1.find((item) => item.path === location1.pathname)?.title ??
           ""}
       </h1>
 
-      <div className="flex space-x-6 gap-2 text-[30px]">
+      <div className="flex space-x-2 gap-1 text-[28px] leading-tight rounded">
         <Link
           to="/how-it-works"
-          className=" h-[80px] flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-4 py-2"
+          className={`flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-8 py-2 bg-[#536365]/35 ${
+            location.pathname === "/how-it-works"
+              ? "bg-[#536365]/80 text-white"
+              : "bg-[#536365]/35 "
+          }`}
         >
           How It
           <br />
@@ -145,7 +149,11 @@ export default function Navbar() {
         </Link>
         <Link
           to="/nmr-fundamentals"
-          className=" h-[80px] flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-4 py-2"
+          className={`flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-8 py-2 bg-[#536365]/35 ${
+            location.pathname === "/nmr-fundamentals"
+              ? "bg-[#536365]/80 text-white "
+              : "bg-[#536365]/35 "
+          }`}
         >
           NMR
           <br />
@@ -153,7 +161,11 @@ export default function Navbar() {
         </Link>
         <Link
           to="/course-usage"
-          className=" h-[80px] flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-4 py-2"
+          className={`flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-8 py-2 bg-[#536365]/35 ${
+            location.pathname === "/course-usage"
+              ? "bg-[#536365]/80 text-white "
+              : "bg-[#536365]/35 "
+          }`}
         >
           Course
           <br />
@@ -161,7 +173,11 @@ export default function Navbar() {
         </Link>
         <Link
           to="/faculty-research"
-          className=" h-[80px] flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-4 py-2"
+          className={`flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-8 py-2 bg-[#536365]/35 ${
+            location.pathname === "/faculty-research"
+              ? "bg-[#536365]/80 text-white "
+              : "bg-[#536365]/35 "
+          }`}
         >
           Faculty
           <br />
@@ -169,7 +185,11 @@ export default function Navbar() {
         </Link>
         <Link
           to="/about-project"
-          className="w-[180px] h-[80px] flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-4 py-2"
+          className={`flex flex-col flex-wrap justify-center items-center font-semibold rounded text-[#A5C882] text-center px-8 py-2 bg-[#536365]/35 ${
+            location.pathname === "/about-project"
+              ? "bg-[#536365]/80 text-white "
+              : "bg-[#536365]/35 "
+          }`}
         >
           About this
           <br />

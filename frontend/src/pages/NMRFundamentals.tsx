@@ -44,7 +44,7 @@ export default function NMRFundamentals() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/nmr-instrumentation"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           NMR
           <br />
@@ -53,7 +53,7 @@ export default function NMRFundamentals() {
         {/* Here it is used to link to the NMR Instrumentation page */}
         <Link
           to="/interpreting"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Interpreting
           <br />
@@ -62,7 +62,7 @@ export default function NMRFundamentals() {
         {/* Here it is used to link to the Interpreting NMR Spectrum page */}
         <Link
           to="/diagram"
-          className="flex flex-col items-center justify-center font-bold text-[5vw] md:text-[40px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[80%] md:w-[395px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Diagram of
           <br />
