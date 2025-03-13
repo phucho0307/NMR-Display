@@ -14,10 +14,10 @@ export default function Diana() {
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
       {/* Title Section */}
       <div className="w-full text-left pt-15 pb-10">
-        <h1 className="text-[#A5C882] text-[200px] font-bold leading-[260px] text-center ">
-          Biological
+        <h1 className="text-[#A5C882] text-[270px] font-bold leading-[260px] text-center ">
+          Dr. Diana
           <br />
-          Instrumentation
+          Cermak, PhD
         </h1>
       </div>
 
@@ -25,14 +25,14 @@ export default function Diana() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/asym-syn"
-          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Asymmetric Synthesis
         </Link>
         {/* Here it is used to link to the Asymmetric Synthesis page */}
         <Link
           to="/syn-pho"
-          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[30px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Synthesis of
           <br />
@@ -44,7 +44,7 @@ export default function Diana() {
       {/* Back Button */}
       <div className="flex items-center justify-center w-full mt-10">
         <Link
-          to="/course-usage"
+          to="/faculty-research"
           className="flex items-center text-[#A5C882] text-[5vw] md:text-[30px] font-bold"
         >
           <ArrowBackIosIcon sx={{ fontSize: 55 }} />

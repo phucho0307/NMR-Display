@@ -44,19 +44,19 @@ export default function FacultyResearch() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/katie"
-          className="flex flex-col items-center justify-center font-bold text-[35px] w-[400px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[400px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
-          Katie Adelsberger, PhD
+          Katie <br/> Adelsberger, PhD
         </Link>
         <Link
           to="/diana"
-          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Diana Cermak, PhD
         </Link>
         <Link
           to="/helen"
-          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[100px] md:h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[100px] md:h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Helen Hoyt, PhD
         </Link>

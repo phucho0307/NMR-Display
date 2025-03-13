@@ -37,7 +37,7 @@ export default function OrgChem() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/spec-lab"
-          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Spectroscopy
           <br />
@@ -46,7 +46,7 @@ export default function OrgChem() {
         {/* Here it is used to link to the Spectroscopy Unknown Lab page */}
         <Link
           to="/3-week"
-          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           3-Week Lab
           <br />
@@ -55,7 +55,7 @@ export default function OrgChem() {
         {/* Here it is used to link to the 3-Week Lab Synthesis Project page */}
         <Link
           to="/stereo"
-          className="flex flex-col items-center justify-center font-bold text-[35px] w-[395px] h-[140px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[32px] w-[395px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Stereoselective <br /> Reduction of Camphor
         </Link>

@@ -49,19 +49,19 @@ export default function AboutProj() {
       <div className="flex flex-wrap justify-center gap-6">
         <Link
           to="/about"
-          className="flex flex-col items-center justify-center font-bold text-[35px] w-[400px] h-[100px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           About
         </Link>
         <Link
           to="/credits"
-          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[100px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Credits
         </Link>
         <Link
           to="/special-thanks"
-          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[100px] rounded bg-[#080821] text-center p-4"
+          className="flex flex-col items-center justify-center font-bold text-[40px] w-[400px] h-[140px] rounded bg-[#536365]/35 text-center p-4"
         >
           Special Thanks
         </Link>
