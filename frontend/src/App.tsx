@@ -33,6 +33,7 @@ import SynPho from "./pages/SynPho";
 import ChemicalShift from "./pages/ChemicalShift";
 import Integration from "./pages/Integration";
 import Splitting from "./pages/Splitting";
+import { InactivityProvider } from "./components/InactivityContext";
 
 /**
  * The main application component that defines routing structure.
@@ -51,7 +52,7 @@ import Splitting from "./pages/Splitting";
  */
 function App(): JSX.Element {
   return (
-    <>
+    <InactivityProvider>
       <Routes>
         <Route element={<Layout />}>
           {/* Main Pages */}
@@ -95,7 +96,7 @@ function App(): JSX.Element {
           <Route path="lig-syn" element={<LigSyn />} />
         </Route>
       </Routes>
-    </>
+    </InactivityProvider>
   );
 }
 
