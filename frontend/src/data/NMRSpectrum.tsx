@@ -31,8 +31,8 @@ export const NMRSpectrum: NMRSpectrumType = [
     `,
   },
   {
-    title: `<sup>1</sup>H NMR Spectroscopy`,
-    extraTitle: "Different Experiment <br /> Produce Different <br /> Spectra",
+    title: `<sup>1</sup>H NMR </br> Spectroscopy`,
+    extraTitle: "Different Experiment Produce Different Spectra",
     description: `
       <p>There are four main aspects of NMR spectra that give us information about the chemical structure of our sample.</p>
       <p>A variety of experiments can be performed to give us information about nuclei in a molecule.
@@ -46,7 +46,7 @@ export const NMRSpectrum: NMRSpectrumType = [
     extraTitle: "",
     description: `
       <ol class="list-decimal pl-20 text-[40px] text-[#FEFCFC] flex flex-col gap-10">
-        <li><a href="/symentry" class="underline text-[#A5C882] pl-3">Symentry</a></li>
+        <li><a href="/symmetry" class="underline text-[#A5C882] pl-3">Symmetry</a></li>
         <li><a href="/chemical-shift" class="underline text-[#A5C882] pl-3">Chemical Shift</a></li>
         <li><a href="/integration" class="underline text-[#A5C882] pl-3">Integration</a></li>
         <li><a href="/splitting" class="underline text-[#A5C882] pl-3">Splitting</a></li>

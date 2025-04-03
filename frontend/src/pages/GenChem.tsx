@@ -30,7 +30,7 @@ export default function GenChem() {
           </h2>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC]">
             <p>
-              13C NMR spectroscopy is used to distinguish the number of types of
+            <sup>13</sup>C NMR spectroscopy is used to distinguish the number of types of
               carbon atoms among a set of isomer compounds with the same
               molecular formula but different structures.
             </p>

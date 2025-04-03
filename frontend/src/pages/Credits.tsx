@@ -71,6 +71,7 @@ export default function Credits() {
         {
           name: "Jessi Quach, class of '24",
           details: "Major: Computer Science",
+          image: "/images/NMR-large.png", // no image available
         },
         {
           name: "Adam Brohl, class of ‘24",
@@ -86,6 +87,7 @@ export default function Credits() {
           name: "James Adamson, class of ‘23",
           details:
             "Major: Studio Art | Minor: Graphic Design & Computer Science",
+          image: "/images/NMR-large.png", // no image available
         },
         {
           name: "Kelly Fisk, class of ‘22",
@@ -100,11 +102,15 @@ export default function Credits() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10 text-white">
       <div className="flex gap-10">
-        <div className="w-1/2">
+        <div className="w-1/2 h-[840px] flex items-center justify-center">
           <img
             src={imageSrc}
             alt="Project Visual"
-            className="h-[840px] w-full rounded-lg shadow-lg object-contain"
+            className={`w-full rounded-lg shadow-lg object-contain ${
+              imageSrc === "/images/NMR-large.png"
+                ? "border-10 border-[#A5C882] "
+                : "h-[840px]"
+            }`}
           />
         </div>
 

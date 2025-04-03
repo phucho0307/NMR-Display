@@ -13,15 +13,15 @@ export default function Navbar(): React.ReactElement {
 
   const Location1 = [
     {
-      title: "Biochemical Instrumentation",
+      title: "Biological Instrumentation",
       path: "/yeast",
     },
     {
-      title: "Biochemical Instrumentation",
+      title: "Biological Instrumentation",
       path: "/nucl-prot",
     },
     {
-      title: "Biochemical Instrumentation",
+      title: "Biological Instrumentation",
       path: "/det-rate",
     },
     {
@@ -112,6 +112,22 @@ export default function Navbar(): React.ReactElement {
     {
       title: "Special Thanks",
       path: "/special-thanks",
+    },
+    {
+      title: "Basic Aspects",
+      path: "/symmetry",
+    },
+    {
+      title: "Basic Aspects",
+      path: "/chemical-shift",
+    },
+    {
+      title: "Basic Aspects",
+      path: "/integration",
+    },
+    {
+      title: "Basic Aspects",
+      path: "/splitting",
     },
   ];
 

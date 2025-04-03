@@ -29,7 +29,7 @@ export default function NuclProt() {
           </h2>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC]">
             <p>
-              Students use 31P NMR spectroscopy to study how the protonation
+              Students use <sup>31</sup>P NMR spectroscopy to study how the protonation
               state of the ATP nucleotide influences the binding of Magnesium
               Cation.
             </p>

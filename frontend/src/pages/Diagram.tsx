@@ -16,8 +16,6 @@ export default function Diagram() {
   // the buttons center aligned horizontally each with the different positions
   // diagram in the middle
 
-  // const [response, setResponse] = useState(null);
-
   /**
    * Handles the button click event to send an API request.
    *
@@ -37,10 +35,10 @@ export default function Diagram() {
         ></img>
       </div>
 
-      <div>
+      <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] left-[100px]">
         <button
           onClick={handleClick}
-          className="absolute top-[220px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           All Components
         </button>
@@ -48,7 +46,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[420px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           The Magnet
         </button>
@@ -56,7 +54,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[620px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Liquid Nitrogen
         </button>
@@ -64,15 +62,16 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[820px] left-[170px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Liquid Helium
         </button>
         {/* Here it is used to send an API request for the liquid helium component */}
-
+      </div>
+      <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
           onClick={handleClick}
-          className="absolute top-[220px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           The Sample
         </button>
@@ -80,7 +79,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[420px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Mylar
         </button>
@@ -88,7 +87,7 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[620px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           Shim Coils
         </button>
@@ -96,18 +95,18 @@ export default function Diagram() {
 
         <button
           onClick={handleClick}
-          className="absolute top-[820px] left-[1450px] bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
+          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded"
         >
           The Pulse
         </button>
         {/* Here it is used to send an API request for the pulse component */}
       </div>
       <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start mr-145 absolute bottom-10 left-16">
-          <Link to="/nmr-fundamentals">
-            <ArrowBackIosIcon sx={{ fontSize: 55 }} />
-            <span>Back</span>
-          </Link>
-        </div>
+        <Link to="/nmr-fundamentals">
+          <ArrowBackIosIcon sx={{ fontSize: 55 }} />
+          <span>Back</span>
+        </Link>
+      </div>
     </main>
   );
 }

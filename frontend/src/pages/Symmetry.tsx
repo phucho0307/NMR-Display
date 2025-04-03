@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import { useState, useEffect } from "react";
-import { SymentryData } from "../data/SymentryData";
+import { SymmetryData } from "../data/SymmetryData";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Ethanol from "../components/Ethanol";
 import CH2 from "../components/CH2";
@@ -19,13 +19,13 @@ import CH3Graph from "../components/CH3Graph";
 
 /**
  * @fileoverview
- * The `Symentry` component is responsible for displaying NMR symmetry-related
+ * The `Symmetry` component is responsible for displaying NMR symmetry-related
  * information, allowing users to toggle between different chemical components.
  *
  * @component
- * @returns {JSX.Element} The Symentry page with interactive elements.
+ * @returns {JSX.Element} The Symmetry page with interactive elements.
  */
-export default function Symentry(): JSX.Element {
+export default function Symmetry(): JSX.Element {
   /**
    * @typedef {Object} ComponentMappingObject
    * @property {number} id - Unique identifier for the component.
@@ -45,7 +45,7 @@ export default function Symentry(): JSX.Element {
   const [componentNumber, setComponentNumber] = useState<number | null>(null);
 
   /** @constant {Object} currentItem - The default data object displayed initially. */
-  const currentItem = SymentryData[0];
+  const currentItem = SymmetryData[0];
 
   /**
    * @constant {ComponentMappingType} componentMapping
@@ -124,9 +124,6 @@ export default function Symentry(): JSX.Element {
   return (
     <div className="flex flex-col gap-2 items-center bg-[#0C0C31] h-full">
       <div className="flex justify-center items-center w-full px-10 h-[790px]">
-        <h1 className="text-[70px] font-bold text-[#A5C882] absolute top-12 left-64">
-          How it Works
-        </h1>
         <div className="w-1/2 flex items-center justify-center h-full">
           {showComponent && currentComponent ? (
             currentComponent.component
@@ -140,8 +137,8 @@ export default function Symentry(): JSX.Element {
 
         <div className="w-1/2 flex flex-col items-start justify-center h-full">
           <div>
-            <h2 className="text-[52px] px-4 pt-10 pb-4">
-              Number of <br />
+            <h2 className="text-[55px] font-bold px-4 pt-10 pb-4">
+              Number of
               Peaks
             </h2>
           </div>

@@ -30,7 +30,7 @@ export default function Yeast() {
           </h2>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC]">
             <p>
-              In this experiment, students use 13C NMR spectroscopy to follow
+              In this experiment, students use <sup>13</sup>C NMR spectroscopy to follow
               the formation of the fermentation products over time.
             </p>
           </div>

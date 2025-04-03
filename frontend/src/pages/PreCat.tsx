@@ -31,7 +31,7 @@ export default function PreCat() {
             <p>
               Students bind their synthesized ligands to the iron(II) bromide to
               form precatalysts that are paramagnetic, which are then identified
-              in part of 1H NMR spectroscopy using modified parameters to
+              in part of <sup>1</sup>H NMR spectroscopy using modified parameters to
               accommodate the magnetism from the metal center.
             </p>
           </div>

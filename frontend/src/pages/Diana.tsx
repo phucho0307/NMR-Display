@@ -13,7 +13,7 @@ export default function Diana() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
       {/* Title Section */}
-      <div className="w-full text-left pt-15 pb-10">
+      <div className="w-full text-left pt-15 pb-10 h-[640px]">
         <h1 className="text-[#A5C882] text-[270px] font-bold leading-[260px] text-center ">
           Dr. Diana
           <br />

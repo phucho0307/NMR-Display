@@ -28,7 +28,7 @@ export default function DetRate() {
           </h2>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC]">
             <p>
-              In this experiment students use 1H NMR to study the rate of proton
+              In this experiment students use <sup>1</sup>H NMR to study the rate of proton
               exchange with deuterium in Thiamine.
             </p>
           </div>

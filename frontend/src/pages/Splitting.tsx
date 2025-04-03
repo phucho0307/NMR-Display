@@ -95,9 +95,6 @@ export default function Splitting() {
   return (
     <div className="flex flex-col gap-2 items-center bg-[#0C0C31] h-full">
       <div className="flex justify-center items-center w-full px-10 h-[790px]">
-        <h1 className="text-[70px] font-bold text-[#A5C882] absolute top-12 left-64">
-          How it Works
-        </h1>
         <div className="w-1/2 flex items-center justify-center h-full">
           {showComponent && currentComponent ? (
             currentComponent.component
@@ -111,8 +108,8 @@ export default function Splitting() {
 
         <div className="w-1/2 flex flex-col items-start justify-center h-full">
           <div>
-            <h2 className="text-[52px] px-4 pt-10 pb-4">
-              How Many <br /> Neighboring <br /> Hydrogens
+            <h2 className="text-[55px] font-bold px-4 pt-10 pb-4">
+              How Many Neighboring Hydrogens
             </h2>
           </div>
           <div
