@@ -30,7 +30,7 @@ export default function LigSyn() {
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC]">
             <p>
               Students prepare new compounds to bind to and support transition
-              metal catalysts, using 1D (1H, 13C, DEPT-135), and 2D (HSQC, HMBC)
+              metal catalysts, using 1D (<sup>1</sup>H, <sup>13</sup>C, DEPT-135), and 2D (HSQC, HMBC)
               NMR experiments to identify the new products they have formed.
             </p>
           </div>

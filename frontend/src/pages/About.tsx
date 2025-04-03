@@ -18,16 +18,16 @@ export default function About() {
   return (
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <div className="flex gap-10">
-        <div className="w-1/2">
+        <div className="w-1/2 h-[840px] flex items-center justify-center">
           <img
             src="/images/NMR-large.png"
             alt="Project Visual"
-            className="h-[840px] w-full rounded-lg shadow-lg object-contain"
+            className=" w-full shadow-lg object-contain  border-10 border-[#A5C882]"
           />
         </div>
 
         <div className="w-1/2 flex flex-col gap-10 items-start justify-evenly">
-          <p className="p-4 text-[40px]">by Dr. Diana Cermark</p>
+          <p className="p-4 text-[55px] font-bold">by Dr. Diana Cermark</p>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC] overflow-y-auto px-4 scrollbar-custom flex flex-col gap-16 h-[600px]">
             <p>
               The seed for this project was planted in 2014, soon after we were

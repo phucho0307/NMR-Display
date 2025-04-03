@@ -22,11 +22,11 @@ import SpecialThanks from "./pages/SpecialThanks";
 import SpecLab from "./pages/SpecLab";
 import Stereo from "./pages/Stereo";
 import ThreeWeek from "./pages/ThreeWeek";
-import Yeast from "./pages/Yeast"; // Why: Yeast-related project page.
+import Yeast from "./pages/Yeast"; 
 import NuclProt from "./pages/NuclProt";
 import DetRate from "./pages/DetRate";
 import LigSyn from "./pages/LigSyn";
-import Symentry from "./pages/Symentry";
+import Symmetry from "./pages/Symmetry";
 import PreCat from "./pages/PreCat";
 import AsymSyn from "./pages/AsymSyn";
 import SynPho from "./pages/SynPho";
@@ -88,7 +88,7 @@ function App(): JSX.Element {
           <Route path="pre-cat" element={<PreCat />} />
           <Route path="asym-syn" element={<AsymSyn />} />
           <Route path="syn-pho" element={<SynPho />} />
-          <Route path="symentry" element={<Symentry />} />
+          <Route path="symmetry" element={<Symmetry />} />
           {/* Chemistry-Specific Topics */}
           <Route path="chemical-shift" element={<ChemicalShift />} />
           <Route path="integration" element={<Integration />} />

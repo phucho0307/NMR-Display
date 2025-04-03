@@ -26,9 +26,9 @@ export default function Stereo() {
             Reduction of Camphor
           </h2>
           <p className="font-serif text-[36px]  text-[#FEFCFC]">
-            1H NMR spectroscopy is used to determine the stereoselectivity of
+          <sup>1</sup>H NMR spectroscopy is used to determine the stereoselectivity of
             the borohydride reduction of camphor, a chiral ketone, through
-            integration of two particular hydrogens in the 1H NMR spectrum of
+            integration of two particular hydrogens in the <sup>1</sup>H NMR spectrum of
             the product mixture.
           </p>
           <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start">

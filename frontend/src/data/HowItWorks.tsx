@@ -51,7 +51,7 @@ export const HowItWorks: HowItWorksType = [
     description: `
       <p>In order for our magnet to be superconducting it needs to be at a very cold temperature.</p> 
       <p>The superconducting magnet is cooled by liquid helium, which provides this low temperature (4K / -452℉/ -269℃).</p>
-      <p>The liquid helium will evaporate over time. To slow down this evaporation, the (expensive) liquid helium is kept cold by a separate layer of (cheap) liquid nitrogen (77K, -196℃ / -320℉).</p>
+      <p>The liquid helium will evaporate over time. To slow down this evaporation, the (expensive) liquid helium is kept cold by a separate layer of (cheap) liquid nitrogen (77K / -196℃ / -320℉).</p>
       <p>The outside layer of the can is insulated by a vacuum and with Mylar, to help keep the magnet cold.</p> 
       <p>Basically, the entire metal can is like a Yeti - an excellent thermos!</p>
     `,
@@ -74,15 +74,15 @@ export const HowItWorks: HowItWorksType = [
     title: "The Nuclei",
     description: `
       <p>Only certain elements can be observed by NMR spectroscopy.</p>
-      <p>An isotope of an element is NMR active if it has a 'nuclear spin' magnitude greater than 1/2.</p>
+      <p>An isotope of an element is NMR active if it has a "nuclear spin" magnitude greater than 1/2.</p>
       <p>This spin is a weird, spooky, quantum mechanical property, and it is not the physical spinning of a particle.  The mathematics of the quantum mechanical spin number and a physically spinning object are very similar, which is how it got its name.</p>
       <p>When a nucleus with a non-zero nuclear spin is placed in a magnetic field, it precesses around the magnetic field axis just like how a gyroscope or a top precesses under the influence of gravity.  This precession of the nucleus can be detected as radio waves.</p>
-      <p>All nuclei of a given isotope precess at the exact same rate when in the exact same magnetic field, and hence are detected at the same radio frequency.  But in a molecule, the magnetic field can and does vary by a 'small' amount depending on the chemical bonding and environment.</p>
-      <p>This small variation in the frequency of the radio signals is called 'chemical shift', and gives us a useful tool to peer inside a molecule.</p>
+      <p>All nuclei of a given isotope precess at the exact same rate when in the exact same magnetic field, and hence are detected at the same radio frequency.  But in a molecule, the magnetic field can and does vary by a "small" amount depending on the chemical bonding and environment.</p>
+      <p>This small variation in the frequency of the radio signals is called "chemical shift", and gives us a useful tool to peer inside a molecule.</p>
     `,
   },
   {
-    title: "The Four Standard Nuclei",
+    title: "The Four </br> Standard Nuclei",
     description: `
     <p>
       Depending on the nucleus of interest you’ve selected, the magnetic moment varies and thus the resonant frequency varies.
@@ -136,11 +136,11 @@ export const HowItWorks: HowItWorksType = [
       <p>Very shortly after the pulse, the nuclei stop precessing together (stop being in phase). The nuclei get out of sync for two main reasons:</p>
       <ol class="list-decimal pl-6 text-[30px] text-[#FEFCFC] flex flex-col gap-10">
         <li>
-          <p>1. The nuclei within a molecule are in slightly different magnetic environments and so precess at slightly different frequencies.</p>
+          <p> The nuclei within a molecule are in slightly different magnetic environments and so precess at slightly different frequencies.</p>
           <p>For example, consider the two different hydrogen environments in <button data-id="1" id="component-btn" class="underline text-[#A5C882]">methanol:</button></p>
           <p><button data-id="2" id="component-btn" class="underline text-[#A5C882]">one is attached to oxygen</button> and <button data-id="3" id="component-btn" class="underline text-[#A5C882]">the others are attached to carbon.</button></p>
         </li>
-        <li>2. The nuclei gradually “relax” back to equilibrium.</li>
+        <li> The nuclei gradually “relax” back to equilibrium.</li>
       </ol>
       <p>As the nuclei stop precessing in sync, the strength of the magnetic induction decreases.  One can observe this magnetic induction decay over time.  This is called the Free Induction Decay (FID).</p>
       <p>If an FID signal is weak, the experiment can be repeated and added together in order to improve the signal to noise. The number of scans needed depends on the type of experiment, the amount of sample you have, and the problem you're trying to solve.</p>

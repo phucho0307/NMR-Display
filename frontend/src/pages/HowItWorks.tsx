@@ -122,14 +122,14 @@ export default function HowItWorksComponent(): React.ReactElement {
   }, [currentIndex]);
 
   return (
-    <div className="flex flex-col gap-2 items-center bg-[#0C0C31] h-full">
+    <div className="flex flex-col gap-2 items-center h-full">
       <div className="flex justify-center items-center w-full px-10 h-[790px]">
         <div className="w-1/2 flex items-center justify-center h-full">
           {showComponent && currentComponent ? (
             currentComponent.component
           ) : (
             <div
-              className="text-[100px] font-bold text-[#A5C882] text-left"
+              className="text-[100px] font-bold text-[#A5C882] text-left leading-[100px]"
               dangerouslySetInnerHTML={{ __html: currentItem.title }}
             />
           )}

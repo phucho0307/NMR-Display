@@ -67,7 +67,7 @@ export default function Interpreting() {
         {/* Title Section */}
         <div className="w-1/2 flex items-center justify-center h-full">
           <h2
-            className="text-[100px] font-bold text-[#A5C882] text-left"
+            className="text-[100px] font-bold text-[#A5C882] text-left leading-[100px]"
             dangerouslySetInnerHTML={{ __html: currentItem.title }}
           />
         </div>

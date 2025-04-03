@@ -26,7 +26,7 @@ export default function ThreeWeek() {
             Synthesis
           </h2>
           <p className="font-serif text-[36px]  text-[#FEFCFC]">
-            1H and 13C NMR spectroscopy are used to characterize three reaction
+          <sup>1</sup>H and <sup>13</sup>C NMR spectroscopy are used to characterize three reaction
             products during a 3-week synthesis project which culminates in the
             synthesis of 5, 5-diphenyl-4-penten-2-one.
           </p>

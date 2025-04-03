@@ -25,7 +25,7 @@ export default function CourseUsage() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
       {/* Title Section */}
-      <div className="w-full text-left pt-15 pb-10">
+      <div className="w-full text-left pt-15 pb-10 h-[640px]">
         <p className="text-[#A5C882] font-bold text-[200px] leading-45 ml-120">
           <span className="text-white">N</span>
           UCLEAR

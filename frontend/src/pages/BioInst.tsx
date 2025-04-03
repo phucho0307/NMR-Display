@@ -25,8 +25,8 @@ export default function BioInst() {
   return (
     <main className="bg-[#0C0C31] flex flex-col items-center px-4">
       {/* Title Section */}
-      <div className="w-full text-left pt-15 pb-10">
-        <h1 className="text-[#A5C882] text-[200px] font-bold leading-[260px] text-center ">
+      <div className="w-full text-left pt-15 pb-10 h-[640px]">
+        <h1 className="text-[#A5C882] text-[240px] font-bold leading-[210px] text-center items-center justify-center pt-20">
           Biological
           <br />
           Instrumentation
