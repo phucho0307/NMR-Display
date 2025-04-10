@@ -134,8 +134,8 @@ export default function SpecialThanks() {
               faculty.
             </p>
             <p>
-              <span className="font-bold text-[#A5C882]">Tioluwani Enoch</span>-
-              for enhancing the backend functionality, refining frontend
+              <span className="font-bold text-[#A5C882]">Tioluwani Enoch</span>{" "}
+              - for enhancing the backend functionality, refining frontend
               components, and ensuring seamless integration across the NMR
               display project.
             </p>
