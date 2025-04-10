@@ -59,7 +59,7 @@ export default function Credits() {
       image: "/images/diana_cermak.png",
     },
     {
-      title: "Designer/ Project Manager",
+      title: "Project Manager/ Designer",
       name: "Kelly Fisk, class of ‘22",
       details:
         "Major: (self-designed) Graphic & Interactive Design for Art & Business",
