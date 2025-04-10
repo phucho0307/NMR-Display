@@ -133,8 +133,27 @@ export default function SpecialThanks() {
               for in-class and field research photography of students and
               faculty.
             </p>
+            <p>
+              <span className="font-bold text-[#A5C882]">Tioluwani Enoch</span>-
+              for enhancing the backend functionality, refining frontend
+              components, and ensuring seamless integration across the NMR
+              display project.
+            </p>
+            <p>
+              <span className="font-bold text-[#A5C882]">Nour Kamel</span> - for
+              enhancing the frontend of the NMR display site, ensuring a
+              polished and user-friendly interface.
+            </p>
+            <p>
+              <span className="font-bold text-[#A5C882]">Saleshma Dahal</span> -
+              for createing a terminal-controlled Python LED controller for the
+              Raspberry Pi Pico that sends RGB data over USB.
+            </p>
+            <p>
+              <span className="font-bold text-[#A5C882]">Alden Quigley</span> -
+            </p>
           </div>
-          
+
           <div className="flex gap-10 items-left w-full self-end justify-self-end">
             <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start">
               <Link to="/about-project">

@@ -27,7 +27,7 @@ export default function About() {
         </div>
 
         <div className="w-1/2 flex flex-col gap-10 items-start justify-evenly">
-          <p className="p-4 text-[55px] font-bold">by Dr. Diana Cermark</p>
+          <p className="p-4 text-[55px] text-[#A5C882] font-bold">By Dr. Diana Cermark</p>
           <div className="left-[1050px] font-serif text-[36px] text-[#FEFCFC] overflow-y-auto px-4 scrollbar-custom flex flex-col gap-16 h-[600px]">
             <p>
               The seed for this project was planted in 2014, soon after we were
