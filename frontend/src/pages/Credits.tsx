@@ -1,26 +1,50 @@
+/**
+ * @fileoverview Credits component for displaying project contributors and their roles.
+ * This component renders a page showcasing the individuals and teams involved in the project,
+ * using an accordion-style interface for detailed information and an interactive image display.
+ * 
+ * The component includes:
+ * - A responsive layout with an image and accordion sections.
+ * - Dynamic image updates based on user interaction.
+ * - Navigation to the "About Project" page.
+ * 
+ * @module Credits
+ */
+
 import { Link } from "react-router-dom";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 /**
- * Credits component renders the page for the project credits.
+ * Renders the Credits page.
  *
- * This component displays information about the people involved in the project.
- * It includes a title, an image, a description, and a link to navigate back to the
- * previous page. The component uses an accordion to display detailed information
- * about each person or group of people.
+ * This component displays a list of contributors to the project, organized into
+ * categories such as "Project Director," "Designers," and "Programmers." Each
+ * category is presented as an accordion item, which can be expanded to reveal
+ * detailed information. Users can click on names to update the displayed image.
  *
+ * @component
  * @returns {JSX.Element} The JSX code for the Credits page.
  */
 export default function Credits() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [imageSrc, setImageSrc] = useState("/images/NMR-large.png");
 
+/**
+   * Toggles the open state of an accordion item.
+   *
+   * @param {number} index - The index of the accordion item to toggle.
+   */
   const handleClick = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+/**
+   * Updates the displayed image.
+   *
+   * @param {string} [image] - The URL of the image to display. Defaults to the main project image.
+   */
   const handleImageChange = (image?: string) => {
     setImageSrc(image || "/images/NMR-large.png");
   };
@@ -45,11 +69,18 @@ export default function Credits() {
     },
     {
       title: "Hardware and Light Design/Phase I Programming",
-      name: "Philip Griffin, class of ‘20",
-      details: "Majors: Chemistry & Physics",
-      content:
-        "Philip worked closely with Dr. Cermak to bring her ideas to life by designing the overall strategy to use a Raspberry Pi, HTML & CSS to display all of the NMR written material on a touchscreen display. He also designed and implemented the hard wiring of RGB LED strips within the instrument and wrote the Python code necessary to communicate the lighting commands from the display to the lights. Philip’s role in getting all of the moving parts of this project off the ground cannot be understated. Philip would like to specifically thank Alex Fluegel, class of ‘19, for helping to get the Pi, website, and display up and running initially, as well as advising on how best to use these components. “I could not have gotten as far as I did without his help.”",
-      image: "/images/philip_griffin.png",
+      people: [
+        {
+          name: "Philip Griffin, class of ‘20",
+          details: "Majors: Chemistry & Physics. Philip worked closely with Dr. Cermak to bring her ideas to life by designing the overall strategy to use a Raspberry Pi, HTML & CSS to display all of the NMR written material on a touchscreen display. He also designed and implemented the hard wiring of RGB LED strips within the instrument and wrote the Python code necessary to communicate the lighting commands from the display to the lights. Philip’s role in getting all of the moving parts of this project off the ground cannot be understated. ",
+          image: "/images/philip_griffin.png",
+        },
+        {
+          name: "Alex Fluegel, class of ‘19",
+          details: "For helping to get the Pi, website, and display up and running initially, as well as advising on how best to use these components. Philip would like to specifically thank Alex Fluegel, stating, 'I could not have gotten as far as I did without his help.'",
+          image: "/images/NMR-large.png", // no image available
+        },
+      ],
     },
     {
       title: "Phase II Programming Lead",
@@ -77,6 +108,26 @@ export default function Credits() {
           name: "Adam Brohl, class of ‘24",
           details: "Major: Computer Science",
           image: "/images/adam_brohl.png",
+        },
+      ],
+    },
+    {
+      title: "Phase III Programming",
+      people: [
+        {
+          name: "Tioluwani Enoch, class of ‘28",
+          details: "Major: Computer Science | Minor: Business Management",
+          image: "/images/tioluwani_enoch.jpg",
+        },
+        {
+          name: "Nour Kamel, class of '28",
+          details: "Majors: Computer Science & Economics",
+          image: "/images/nour_kamel.jpg",
+        },
+        {
+          name: "Saleshma Dahal, class of '28",
+          details: "Major: Computer Science | Minor: Business Management",
+          image: "/images/saleshma_dahal.jpg",
         },
       ],
     },
