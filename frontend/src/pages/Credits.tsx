@@ -116,7 +116,7 @@ export default function Credits() {
       people: [
         {
           name: "Tioluwani Enoch, class of ‘28",
-          details: "Major: Computer Science | Minor: Business Management",
+          details: "Majors: Computer Science & Data Science",
           image: "/images/tioluwani_enoch.jpg",
         },
         {
