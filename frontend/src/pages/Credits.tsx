@@ -112,7 +112,7 @@ export default function Credits() {
       ],
     },
     {
-      title: "Phase III Programming",
+      title: "Phase III Programming Team",
       people: [
         {
           name: "Tioluwani Enoch, class of ‘28",
