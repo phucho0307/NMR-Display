@@ -149,9 +149,6 @@ export default function SpecialThanks() {
               for createing a terminal-controlled Python LED controller for the
               Raspberry Pi Pico that sends RGB data over USB.
             </p>
-            <p>
-              <span className="font-bold text-[#A5C882]">Alden Quigley</span> -
-            </p>
           </div>
 
           <div className="flex gap-10 items-left w-full self-end justify-self-end">
