@@ -18,7 +18,7 @@ export default function Home() {
         MAGNETIC
       </p>
       <p className="absolute text-[#A5C882] text-[210px] font-bold top-[676px] left-[80px]">
-        RESONACE
+        RESONANCE
       </p>
       <p className="absolute text-[#FEFCFC] text-[210px] font-bold top-[300px] left-[170px]">
         N
