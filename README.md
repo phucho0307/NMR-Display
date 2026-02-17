@@ -73,6 +73,50 @@ The `ChemicalShiftData` array contains several examples explaining how chemical 
 - Descriptions of shielded vs. deshielded atoms
 - Real-world chemical examples such as ethanol and methanol
 
+## How to use the Raspberry PI startup script
+1. Download the file named startup.txt and upload it unto the Raspberry PI
+2. Rename the file from startup.txt to startup.sh and run chmod +x ./startup.sh on the filepath where the startup script exist to make it runnable
+3. Run
+   ```bash
+   sudo nano /etc/systemd/system/THE_NAME_OF_YOUR_SERVCE.service
+   ```
+4. Add this into that service
+   ```
+   [Unit]
+   Description=Start npm dev server + Django server on boot
+   After=graphic.target network-online.target
+   Wants=graphic.target network-online.target
+
+   [Service]
+   Type=simple
+   User=printeros
+   WorkingDirectory=/home/printeros
+   ExecStart=/home/printeros/scripts/start_servers.sh (this is just an example this path should link to where you saved the startup script)
+   Restart=on-failure
+   RestartSec=5
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+5. Ctrl + X, then Y, then Enter to save this new daemon service
+6. Run the following commands to save, start and enable running this daemon service on start or reboot of the Raspberry Pi
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable THE_NAME_OF_YOUR_SERVCE.service
+   sudo systemctl start THE_NAME_OF_YOUR_SERVCE.service
+   ```
+7.  If you ever edit the daemon service you can relaod it like this
+   ```bash
+   sudo systemctl enable THE_NAME_OF_YOUR_SERVCE.service
+   sudo systemctl restart THE_NAME_OF_YOUR_SERVCE.service
+   ```
+8. To see the status and logs of your daemon service for like errors and others run these
+   ```bash
+   sudo systemctl status THE_NAME_OF_YOUR_SERVCE.service
+   # or
+   journalctl -u THE_NAME_OF_YOUR_SERVCE.service --no-pager
+   ```
+
 ## How to Contribute
 
 We welcome contributions to improve this project. Here’s how you can get involved:
