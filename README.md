@@ -75,7 +75,7 @@ The `ChemicalShiftData` array contains several examples explaining how chemical 
 
 ## How to use the Raspberry PI startup script
 1. Download the file named startup.txt and upload it unto the Raspberry PI
-2. Rename the file from startup.txt to startup.sh and run chmod +x ./startup.sh on the filepath where the startup script exist to make it runnable
+2. Rename the file from ```startup.txt to startup.sh``` and run ```chmod +x ./startup.sh``` on the filepath where the startup script exist to make it runnable
 3. Run
    ```bash
    sudo nano /etc/systemd/system/THE_NAME_OF_YOUR_SERVCE.service
