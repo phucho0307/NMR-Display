@@ -20,7 +20,7 @@ export default function Diagram() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "dragon_traverse",
+        action: "dragon",
         pixel1,
         pixel2,
         rgb,
@@ -65,7 +65,7 @@ export default function Diagram() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "traverse_rainbow",
+        action: "traverse_rgb_group",
       }),
     });
   };
@@ -89,14 +89,14 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleToggle("magnet", 178, 190, [255, 0, 0])}
+          onClick={() => handleToggle("magnet", 178, 190, [0, 255, 0])}
           className={`flex ${activeButtons["magnet"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Magnet
         </button>
 
         <button
-          onClick={() => handleToggle("nitrogen", 60, 115, [0, 255, 0])}
+          onClick={() => handleToggle("nitrogen", 60, 115, [255, 0, 0])}
           className={`flex ${activeButtons["nitrogen"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Nitrogen
@@ -111,7 +111,7 @@ export default function Diagram() {
       </div>
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
-          onClick={() => handleToggle("sample", 158, 177, [128, 0, 128])}
+          onClick={() => handleToggle("sample", 158, 177, [0, 128, 128])}
           className={`flex ${activeButtons["sample"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Sample
@@ -125,7 +125,7 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleToggle("probe", 228, 283, [139, 69, 19])}
+          onClick={() => handleToggle("probe", 228, 283, [69, 139, 19])}
           className={`flex ${activeButtons["probe"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Probe
