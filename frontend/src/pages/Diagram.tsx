@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 export default function Diagram() {
   const CONTROLLER_ID = "pico";
   const API_URL = "http://localhost:8000/lighting-controller/";
+
+  const [activeButtons, setActiveButtons] = useState<Record<string, boolean>>(
+    {},
+  );
 
   const dragonTraverse = async (
     pixel1: number,
@@ -23,6 +28,37 @@ export default function Diagram() {
     });
   };
 
+  const turnOff = async (pixel1: number, pixel2: number) => {
+    const states: Record<string, number[]> = {};
+    for (let i = pixel1; i <= pixel2; i++) {
+      states[i.toString()] = [0, 0, 0];
+    }
+    await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        controller_id: CONTROLLER_ID,
+        action: "update_all_lights",
+        states,
+      }),
+    });
+  };
+
+  const handleToggle = async (
+    name: string,
+    pixel1: number,
+    pixel2: number,
+    rgb: number[],
+  ) => {
+    const isActive = activeButtons[name];
+    if (isActive) {
+      await turnOff(pixel1, pixel2);
+    } else {
+      await dragonTraverse(pixel1, pixel2, rgb);
+    }
+    setActiveButtons((prev) => ({ ...prev, [name]: !isActive }));
+  };
+
   const handleAllComponentClick = async () => {
     await fetch(API_URL, {
       method: "POST",
@@ -33,13 +69,6 @@ export default function Diagram() {
       }),
     });
   };
-
-  const handleLiquidNitrogenClick = () => dragonTraverse(60, 115, [0, 255, 0]);
-  const handleLiquidHeliumClick = () => dragonTraverse(117, 157, [0, 0, 255]);
-  const handleTheSampleClick = () => dragonTraverse(158, 177, [128, 0, 128]);
-  const handleTheMagnetClick = () => dragonTraverse(178, 190, [255, 0, 0]);
-  const handleAirLiftClick = () => dragonTraverse(191, 227, [255, 255, 255]);
-  const handleTheProbeClick = () => dragonTraverse(228, 283, [139, 69, 19]);
 
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
@@ -60,44 +89,44 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={handleTheMagnetClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
+          onClick={() => handleToggle("magnet", 178, 190, [255, 0, 0])}
+          className={`flex ${activeButtons["magnet"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Magnet
         </button>
 
         <button
-          onClick={handleLiquidNitrogenClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
+          onClick={() => handleToggle("nitrogen", 60, 115, [0, 255, 0])}
+          className={`flex ${activeButtons["nitrogen"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Nitrogen
         </button>
 
         <button
-          onClick={handleLiquidHeliumClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
+          onClick={() => handleToggle("helium", 117, 157, [0, 0, 255])}
+          className={`flex ${activeButtons["helium"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Helium
         </button>
       </div>
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
-          onClick={handleTheSampleClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
+          onClick={() => handleToggle("sample", 158, 177, [128, 0, 128])}
+          className={`flex ${activeButtons["sample"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Sample
         </button>
 
         <button
-          onClick={handleAirLiftClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
+          onClick={() => handleToggle("airlift", 191, 227, [255, 255, 255])}
+          className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Air Lift
         </button>
 
         <button
-          onClick={handleTheProbeClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
+          onClick={() => handleToggle("probe", 228, 283, [139, 69, 19])}
+          className={`flex ${activeButtons["probe"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Probe
         </button>
