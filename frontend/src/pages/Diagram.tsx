@@ -1,12 +1,3 @@
-/**
- * Diagram component renders the page for the NMR diagram.
- *
- * This component displays a diagram of NMR components and several buttons
- * that send API requests when clicked. Each button corresponds to a different
- * component of the NMR diagram.
- *
- * @returns {JSX.Element} The JSX code for the Diagram page.
- */
 import { Link } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
@@ -14,14 +5,20 @@ export default function Diagram() {
   const CONTROLLER_ID = "pico";
   const API_URL = "http://localhost:8000/lighting-controller/";
 
-  const setLight = async (light_id: number) => {
+  const dragonTraverse = async (
+    pixel1: number,
+    pixel2: number,
+    rgb: number[],
+  ) => {
     await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "set_light_state",
-        state: { [light_id]: [1] },
+        action: "dragon_traverse",
+        pixel1,
+        pixel2,
+        rgb,
       }),
     });
   };
@@ -33,46 +30,16 @@ export default function Diagram() {
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
         action: "traverse_rainbow",
-        // states: {
-        //   "0": [1],
-        //   "1": [1],
-        //   "2": [1],
-        //   "3": [1],
-        //   "4": [1],
-        //   "5": [1],
-        //   "6": [1],
-        // },
       }),
     });
   };
 
-  const handleTheMagnetClick = async () => {
-    await setLight(0);
-  };
-
-  const handleLiquidNitrogenClick = async () => {
-    await setLight(1);
-  };
-
-  const handleLiquidHeliumClick = async () => {
-    await setLight(2);
-  };
-
-  const handleTheSampleClick = async () => {
-    await setLight(3);
-  };
-
-  const handleMylarClick = async () => {
-    await setLight(4);
-  };
-
-  const handleShimCoilsClick = async () => {
-    await setLight(5);
-  };
-
-  const handleThePulseClick = async () => {
-    await setLight(6);
-  };
+  const handleLiquidNitrogenClick = () => dragonTraverse(60, 115, [0, 255, 0]);
+  const handleLiquidHeliumClick = () => dragonTraverse(117, 157, [0, 0, 255]);
+  const handleTheSampleClick = () => dragonTraverse(158, 177, [128, 0, 128]);
+  const handleTheMagnetClick = () => dragonTraverse(178, 190, [255, 0, 0]);
+  const handleAirLiftClick = () => dragonTraverse(191, 227, [255, 255, 255]);
+  const handleTheProbeClick = () => dragonTraverse(228, 283, [139, 69, 19]);
 
   return (
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
@@ -122,24 +89,17 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={handleMylarClick}
+          onClick={handleAirLiftClick}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
-          Mylar
+          Air Lift
         </button>
 
         <button
-          onClick={handleShimCoilsClick}
+          onClick={handleTheProbeClick}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
-          Shim Coils
-        </button>
-
-        <button
-          onClick={handleThePulseClick}
-          className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
-        >
-          The Pulse
+          The Probe
         </button>
       </div>
       <div className="flex items-center text-[#A5C882] text-[30px] font-bold justify-self-start mr-145 absolute bottom-10 left-16">
