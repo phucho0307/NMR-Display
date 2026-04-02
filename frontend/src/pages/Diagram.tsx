@@ -32,9 +32,7 @@ export default function Diagram() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "fill",
-        rgb: [255, 0, 0],
-        brightness: 200
+        action: "traverse_rainbow",
         // states: {
         //   "0": [1],
         //   "1": [1],
