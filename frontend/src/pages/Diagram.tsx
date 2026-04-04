@@ -96,7 +96,8 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleToggle("nitrogen", 60, 115, [255, 0, 0])}
+          // onClick={() => handleToggle("nitrogen", 60, 115, [255, 0, 0])}
+            onClick={() => handleToggle("nitrogen", 0, 4, [255, 0, 0])}
           className={`flex ${activeButtons["nitrogen"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Nitrogen
