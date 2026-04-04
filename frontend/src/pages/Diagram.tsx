@@ -65,7 +65,8 @@ export default function Diagram() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "traverse_rgb_group",
+        action: "fill",
+        rgb: [128, 0, 128],
       }),
     });
   };
