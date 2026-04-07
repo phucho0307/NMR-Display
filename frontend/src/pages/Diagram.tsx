@@ -17,9 +17,10 @@ export default function Diagram() {
     pixel1: number,
     pixel2: number,
     coco: { color: number[]; count: number }[],
+    flash_max?: number
   ) => {
     await sendCommand("clear");
-    await sendCommand("traverse_segment", { pixel1, pixel2, coco });
+    await sendCommand("traverse_segment", { pixel1, pixel2, coco, ...(flash_max !== undefined && { flash_max }),  });
   };
 
   return (
