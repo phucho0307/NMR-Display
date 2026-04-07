@@ -10,47 +10,46 @@ export default function Diagram() {
     {},
   );
 
-  const dragon = async (pixel1: number, pixel2: number, rgb: number[]) => {
+  const traverseSegment = async (
+    pixel1: number,
+    pixel2: number,
+    coco: { color: number[]; count: number }[],
+    flash_max: number = 20,
+    on_max: number = 30,
+    shift: number = 1,
+    delay: number = 0.05,
+  ) => {
     await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "dragon",
+        action: "traverse_segment",
         pixel1,
         pixel2,
-        rgb,
+        coco,
+        flash_max,
+        on_max,
+        shift,
+        delay,
       }),
     });
   };
 
-  const turnOff = async (start: number, end: number) => {
+  const turnOff = async (pixel1: number, pixel2: number) => {
+    const states: Record<string, number[]> = {};
+    for (let i = pixel1; i <= pixel2; i++) {
+      states[i.toString()] = [0, 0, 0];
+    }
     await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
         action: "set_line",
-        start,
-        end,
-        rgb: [0, 0, 0],
+        states,
       }),
     });
-  };
-
-  const handleToggle = async (
-    name: string,
-    pixel1: number,
-    pixel2: number,
-    rgb: number[],
-  ) => {
-    const isActive = activeButtons[name];
-    if (isActive) {
-      await turnOff(pixel1, pixel2);
-    } else {
-      await dragon(pixel1, pixel2, rgb);
-    }
-    setActiveButtons((prev) => ({ ...prev, [name]: !isActive }));
   };
 
   const handleAllComponentClick = async () => {
@@ -59,9 +58,30 @@ export default function Diagram() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "traverse_rainbow",
+        action: "fill",
+        rgb: [128, 0, 128],
       }),
     });
+  };
+
+
+  const handleToggleSegment = async (
+    name: string,
+    pixel1: number,
+    pixel2: number,
+    coco: { color: number[]; count: number }[],
+    flash_max: number = 5,
+    on_max: number = 7,
+    shift: number = 1,
+    delay: number = 0.1,
+  ) => {
+    const isActive = activeButtons[name];
+    if (isActive) {
+      await turnOff(pixel1, pixel2);
+    } else {
+      await traverseSegment(pixel1, pixel2, coco, flash_max, on_max, shift, delay);
+    }
+    setActiveButtons((prev) => ({ ...prev, [name]: !isActive }));
   };
 
   return (
@@ -83,21 +103,24 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleToggle("magnet", 178, 190, [255, 0, 0])}
+          onClick={() => handleToggleSegment("magnet", 178, 190, [{"color": [255, 0, 0], "count": 12},
+    {"color": [255, 255, 255], "count": 1}])}
           className={`flex ${activeButtons["magnet"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Magnet
         </button>
 
         <button
-          onClick={() => handleToggle("nitrogen", 60, 115, [0, 255, 0])}
+          onClick={() => handleToggleSegment("nitrogen", 60, 115, [{"color": [0, 255, 0], "count": 55},
+    {"color": [255, 255, 255], "count": 1}])}
           className={`flex ${activeButtons["nitrogen"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Nitrogen
         </button>
 
         <button
-          onClick={() => handleToggle("helium", 117, 157, [0, 0, 255])}
+          onClick={() => handleToggleSegment("helium", 117, 157, [{"color": [0, 0, 255], "count": 40},
+    {"color": [255, 255, 255], "count": 1}])}
           className={`flex ${activeButtons["helium"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Helium
@@ -105,21 +128,36 @@ export default function Diagram() {
       </div>
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
-          onClick={() => handleToggle("sample", 158, 177, [128, 0, 128])}
+          onClick={() => handleToggleSegment("sample", 158, 177, [{"color": [255, 15, 0], "count": 19},
+    {"color": [255, 255, 255], "count": 1}])} //orange red
           className={`flex ${activeButtons["sample"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Sample
         </button>
 
         <button
-          onClick={() => handleToggle("airlift", 191, 227, [255, 255, 255])}
+          onClick={() => handleToggleSegment("airlift", 191, 227, [{"color": [136, 140, 141], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
           className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Air Lift
         </button>
 
         <button
-          onClick={() => handleToggle("probe", 228, 283, [69, 139, 19])}
+          onClick={() => handleToggleSegment("airlift", 191, 227, [{"color": [136, 140, 141], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
+          className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
+        >
+          Air Lift
+        </button>
+        <button
+          onClick={() => handleToggleSegment("airlift", 191, 227, [{"color": [136, 140, 141], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
+          className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
+        >
+          Air Lift
+        </button>
+
+        <button
+          onClick={() => handleToggleSegment("probe", 228, 283, [{"color": [69, 139, 19], "count": 55},
+    {"color": [255, 255, 255], "count": 1}])}
           className={`flex ${activeButtons["probe"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Probe
