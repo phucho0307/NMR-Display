@@ -50,7 +50,7 @@ export default function Diagram() {
     { color: [255, 255, 255], count: 1 },  // gap (227)
     { color: [255, 255, 0], count: 55 },   // The Pulse (228–282)
     { color: [255, 255, 255], count: 1 },  // gap (283)
-  ])}
+  ], 0)}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
           All Components
