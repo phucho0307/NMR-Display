@@ -10,11 +10,7 @@ export default function Diagram() {
     {},
   );
 
-  const dragonTraverse = async (
-    pixel1: number,
-    pixel2: number,
-    rgb: number[],
-  ) => {
+  const dragon = async (pixel1: number, pixel2: number, rgb: number[]) => {
     await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -28,18 +24,16 @@ export default function Diagram() {
     });
   };
 
-  const turnOff = async (pixel1: number, pixel2: number) => {
-    const states: Record<string, number[]> = {};
-    for (let i = pixel1; i <= pixel2; i++) {
-      states[i.toString()] = [0, 0, 0];
-    }
+  const turnOff = async (start: number, end: number) => {
     await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "update_all_lights",
-        states,
+        action: "set_line",
+        start,
+        end,
+        rgb: [0, 0, 0],
       }),
     });
   };
@@ -54,7 +48,7 @@ export default function Diagram() {
     if (isActive) {
       await turnOff(pixel1, pixel2);
     } else {
-      await dragonTraverse(pixel1, pixel2, rgb);
+      await dragon(pixel1, pixel2, rgb);
     }
     setActiveButtons((prev) => ({ ...prev, [name]: !isActive }));
   };
@@ -65,7 +59,7 @@ export default function Diagram() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         controller_id: CONTROLLER_ID,
-        action: "traverse_rgb_group",
+        action: "traverse_rainbow",
       }),
     });
   };
@@ -89,14 +83,14 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleToggle("magnet", 178, 190, [0, 255, 0])}
+          onClick={() => handleToggle("magnet", 178, 190, [255, 0, 0])}
           className={`flex ${activeButtons["magnet"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Magnet
         </button>
 
         <button
-          onClick={() => handleToggle("nitrogen", 60, 115, [255, 0, 0])}
+          onClick={() => handleToggle("nitrogen", 60, 115, [0, 255, 0])}
           className={`flex ${activeButtons["nitrogen"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           Liquid Nitrogen
@@ -111,7 +105,7 @@ export default function Diagram() {
       </div>
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
-          onClick={() => handleToggle("sample", 158, 177, [0, 128, 128])}
+          onClick={() => handleToggle("sample", 158, 177, [128, 0, 128])}
           className={`flex ${activeButtons["sample"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Sample
