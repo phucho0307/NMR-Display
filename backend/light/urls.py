@@ -22,10 +22,14 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
 ]
 
-# Serve static files in development
+# Serve static files in development — must be registered before the catch-all
 if settings.DEBUG:
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-    urlpatterns += staticfiles_urlpatterns()   
+    urlpatterns += staticfiles_urlpatterns()
+
+# Catch-all for the React SPA — must be last so it doesn't swallow static file requests
+urlpatterns += [
+    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
+]   
