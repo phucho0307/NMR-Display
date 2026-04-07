@@ -16,7 +16,7 @@ export default function SpecLab() {
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <div className="flex gap-10">
         <img
-          src="/images/Spectroscopy Unknown Lab.jpg"
+          src="/static/images/Spectroscopy Unknown Lab.jpg"
           alt="spectrsocopy unknown lab"
           className="h-[830px]"
         ></img>

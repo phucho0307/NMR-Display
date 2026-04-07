@@ -17,7 +17,7 @@ export default function Yeast() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/cermak_student_140421_0073.png"
+            src="/static/images/cermak_student_140421_0073.png"
             alt="general chemistry"
             className="h-[840px] w-full"
           />

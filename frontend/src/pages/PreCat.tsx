@@ -16,7 +16,7 @@ export default function PreCat() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/4e2 - Precatalyst Synthesis - DS mesparent timelapse images 1.png"
+            src="/static/images/4e2 - Precatalyst Synthesis - DS mesparent timelapse images 1.png"
             alt="precatalyst synthesis"
             className="h-[840px] w-full"
           />

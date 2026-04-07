@@ -16,7 +16,7 @@ export default function NuclProt() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/chemistry-lab-71371.png"
+            src="/static/images/chemistry-lab-71371.png"
             alt="general chemistry"
             className="h-[840px] w-full"
           />

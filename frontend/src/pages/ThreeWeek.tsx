@@ -15,7 +15,7 @@ export default function ThreeWeek() {
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <div className="flex gap-10">
         <img
-          src="/images/chemistry.png"
+          src="/static/images/chemistry.png"
           alt="spectrsocopy unknown lab"
           className="h-[830px]"
         ></img>

@@ -88,7 +88,7 @@ export default function Diagram() {
     <main className="bg-[#0C0C31] w-[1920px] h-[922px]">
       <div className="absolute w-full h-[900px] flex items-center justify-center">
         <img
-          src="/images/NMRDiagramPlaceholder.png"
+          src="/static/images/NMRDiagramPlaceholder.png"
           alt="NMR diagram"
           className="h-[873.8px] w-[530.4px]"
         ></img>
@@ -136,29 +136,23 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleToggleSegment("airlift", 191, 227, [{"color": [136, 140, 141], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
-          className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
+          onClick={() => handleToggleSegment("mylar", 191, 227, [{"color": [44,17,79], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
+          className={`flex ${activeButtons["mylar"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
-          Air Lift
+          Mylar
         </button>
 
         <button
-          onClick={() => handleToggleSegment("airlift", 191, 227, [{"color": [136, 140, 141], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
-          className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
+          onClick={() => handleToggleSegment("shimcoils", 191, 227, [{"color": [255, 20, 147], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
+          className={`flex ${activeButtons["shimcoils"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
-          Air Lift
-        </button>
-        <button
-          onClick={() => handleToggleSegment("airlift", 191, 227, [{"color": [136, 140, 141], "count": 1}, {"color": [255, 255, 255], "count": 36}])}
-          className={`flex ${activeButtons["airlift"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
-        >
-          Air Lift
+          Shim Coils
         </button>
 
         <button
-          onClick={() => handleToggleSegment("probe", 228, 283, [{"color": [69, 139, 19], "count": 55},
+          onClick={() => handleToggleSegment("pulse", 228, 283, [{"color": [255, 255, 0], "count": 55},
     {"color": [255, 255, 255], "count": 1}])}
-          className={`flex ${activeButtons["probe"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
+          className={`flex ${activeButtons["pulse"] ? "bg-[#536365]/70" : "bg-[#536365]/35"} text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer`}
         >
           The Probe
         </button>

@@ -16,7 +16,7 @@ export default function AsymSyn() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/Student_1.png"
+            src="/static/images/Student_1.png"
             alt=""
             className="h-[840px] w-full"
           />

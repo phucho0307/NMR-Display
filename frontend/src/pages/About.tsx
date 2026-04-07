@@ -20,7 +20,7 @@ export default function About() {
       <div className="flex gap-10">
         <div className="w-1/2 h-[840px] flex items-center justify-center">
           <img
-            src="/images/NMR-large.png"
+            src="/static/images/NMR-large.png"
             alt="Project Visual"
             className=" w-full shadow-lg object-contain  border-10 border-[#A5C882]"
           />

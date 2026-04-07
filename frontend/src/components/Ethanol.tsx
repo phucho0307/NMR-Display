@@ -1,5 +1,5 @@
 export default function Ethanol () {
     return (
-        <img src="/images/Ethanol.png" alt="Etahnol graph" />
+        <img src="/static/images/Ethanol.png" alt="Etahnol graph" />
     )    
 }

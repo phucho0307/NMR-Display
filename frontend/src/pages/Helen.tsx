@@ -16,7 +16,7 @@ export default function Helen() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/greenchemistry.png"
+            src="/static/images/greenchemistry.png"
             alt=""
             className="h-[840px] w-full"
           />

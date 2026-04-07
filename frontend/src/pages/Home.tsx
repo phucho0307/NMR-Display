@@ -31,7 +31,7 @@ export default function Home() {
       </p>
       <Link to="/how-it-works">
         <img
-          src="/images/start.svg"
+          src="/static/images/start.svg"
           alt="start"
           className="absolute top-[540px] left-[1560px]"
         />

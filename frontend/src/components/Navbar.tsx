@@ -135,7 +135,7 @@ export default function Navbar(): React.ReactElement {
     <nav className="w-full h-[158px] bg-[#0C0C31] border-b-[4px] border-[#536365]/70 fixed flex items-center justify-between px-10">
       <Link to="/" className="text-[#FEFCFC]">
         <img
-          src="/images/NMR-Logo.png"
+          src="/static/images/NMR-Logo.png"
           alt="NMR LOGO"
           className="border-[4px] border-[#A5C882] w-[100px] h-auto"
         />

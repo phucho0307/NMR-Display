@@ -16,7 +16,7 @@ export default function LigSyn() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/Rectangle 93.png"
+            src="/static/images/Rectangle 93.png"
             alt="a student preparing for a ligand synthesis"
             className="h-[840px] w-full"
           />

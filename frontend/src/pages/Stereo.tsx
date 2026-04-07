@@ -15,7 +15,7 @@ export default function Stereo() {
     <main className="bg-[#0C0C31] w-full h-full p-10">
       <div className="flex gap-10">
         <img
-          src="/images/chemistry-lab-40156.png"
+          src="/static/images/chemistry-lab-40156.png"
           alt="spectrsocopy unknown lab"
           className="h-[830px]"
         ></img>

@@ -16,7 +16,7 @@ export default function GenChem() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/cermak-student.png"
+            src="/static/images/cermak-student.png"
             alt="general chemistry"
             className="h-[840px] w-full"
           />

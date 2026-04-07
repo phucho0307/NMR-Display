@@ -17,7 +17,7 @@ export default function Katie() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/soil.png"
+            src="/static/images/soil.png"
             alt="Katie Adelsberger, PhD at green oaks"
             className="h-[840px] w-full"
           />

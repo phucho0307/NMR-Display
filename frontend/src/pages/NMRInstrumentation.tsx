@@ -28,7 +28,7 @@ export default function NMRInstrumentation() {
         <div className="w-1/2 flex items-center">
           {showImage ? (
             <img
-              src="/images/CurrentInstrument.png"
+              src="/static/images/CurrentInstrument.png"
               alt="/the current NMR instruments"
               className="h-[800px] self-start"
             />

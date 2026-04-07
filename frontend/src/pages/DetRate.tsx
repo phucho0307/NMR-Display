@@ -16,7 +16,7 @@ export default function DetRate() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/chemistry-lab-41277.png"
+            src="/static/images/chemistry-lab-41277.png"
             alt="nucleotide protonation"
             className="h-[840px] w-full"
           />

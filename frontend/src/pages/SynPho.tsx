@@ -16,7 +16,7 @@ export default function SynPho() {
       <div className="flex gap-10">
         <div className="w-1/2">
           <img
-            src="/images/Student_2.png"
+            src="/static/images/Student_2.png"
             alt=""
             className="h-[840px] w-full"
           />
