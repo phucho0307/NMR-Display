@@ -34,10 +34,10 @@ export default function Diagram() {
 
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] left-[100px]">
         <button
-          onClick={async () => {
-            await sendCommand("clear");
-            await sendCommand("fill", { rgb: [128, 0, 128] });
-          }}
+          onClick={() => handleSegment(0, 283, [
+            { color: [255, 0, 0], count: 12 },
+            { color: [255, 255, 255], count: 1 },
+          ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
           All Components
@@ -76,8 +76,8 @@ export default function Diagram() {
 
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
-          onClick={() => handleSegment(158, 177, [
-            { color: [255, 15, 0], count: 19 },
+          onClick={() => handleSegment(191, 227, [
+            { color: [255, 15, 0], count: 36 },
             { color: [255, 255, 255], count: 1 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
@@ -86,9 +86,9 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleSegment(191, 227, [
-            { color: [44, 17, 79], count: 1 },
-            { color: [255, 255, 255], count: 36 },
+          onClick={() => handleSegment(0, 59, [
+            { color: [44, 17, 79], count: 59 },
+            { color: [255, 255, 255], count: 1 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -96,9 +96,9 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleSegment(191, 227, [
-            { color: [255, 20, 147], count: 1 },
-            { color: [255, 255, 255], count: 36 },
+          onClick={() => handleSegment(158, 177, [
+            { color: [255, 20, 147], count: 19 },
+            { color: [255, 255, 255], count: 1 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -112,7 +112,7 @@ export default function Diagram() {
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
-          The Probe
+          The Pulse
         </button>
       </div>
 
