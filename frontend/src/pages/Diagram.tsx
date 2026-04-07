@@ -36,21 +36,13 @@ export default function Diagram() {
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] left-[100px]">
         <button
           onClick={() => handleSegment(0, 283, [
-    { color: [44, 17, 79], count: 59 },   // Mylar (0–58)
-    { color: [255, 255, 255], count: 1 },  // gap (59)
-    { color: [0, 255, 0], count: 55 },     // Liquid Nitrogen (60–114)
-    { color: [255, 255, 255], count: 1 },  // gap (115)
-    { color: [0, 0, 0], count: 1 },        // pixel 116 (unused)
-    { color: [0, 0, 255], count: 40 },     // Liquid Helium (117–156)
-    { color: [255, 255, 255], count: 1 },  // gap (157)
-    { color: [255, 20, 147], count: 19 },  // Shim Coils (158–176)
-    { color: [255, 255, 255], count: 1 },  // gap (177)
-    { color: [255, 0, 0], count: 12 },     // The Magnet (178–189)
-    { color: [255, 255, 255], count: 1 },  // gap (190)
-    { color: [255, 15, 0], count: 36 },    // The Sample (191–226)
-    { color: [255, 255, 255], count: 1 },  // gap (227)
-    { color: [255, 255, 0], count: 55 },   // The Pulse (228–282)
-    { color: [255, 255, 255], count: 1 },  // gap (283)
+    { color: [44, 17, 79], count: 60 },   // Mylar (0–59)
+    { color: [0, 255, 0], count: 57 },     // Liquid Nitrogen (60–116)
+    { color: [0, 0, 255], count: 41 },     // Liquid Helium (117–156)
+    { color: [255, 20, 147], count: 20 },  // Shim Coils (158–176)
+    { color: [255, 0, 0], count: 13 },     // The Magnet (178–189)
+    { color: [255, 15, 0], count: 37 },    // The Sample (191–226)
+    { color: [255, 255, 0], count: 56 },     // The Pulse (228–282)
   ], 0)}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -68,7 +60,7 @@ export default function Diagram() {
         </button>
 
         <button
-          onClick={() => handleSegment(60, 115, [
+          onClick={() => handleSegment(60, 116, [
             { color: [0, 255, 0], count: 55 },
             { color: [255, 255, 255], count: 1 },
           ])}
