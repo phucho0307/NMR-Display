@@ -61,8 +61,8 @@ export default function Diagram() {
 
         <button
           onClick={() => handleSegment(60, 116, [
-            { color: [0, 255, 0], count: 55 },
-            { color: [255, 255, 255], count: 1 },
+            { color: [0, 255, 0], count: 5 },
+            { color: [255, 255, 255], count: 2 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -71,8 +71,8 @@ export default function Diagram() {
 
         <button
           onClick={() => handleSegment(117, 157, [
-            { color: [0, 0, 255], count: 40 },
-            { color: [255, 255, 255], count: 1 },
+            { color: [0, 0, 255], count: 5 },
+            { color: [255, 255, 255], count: 2 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -83,8 +83,8 @@ export default function Diagram() {
       <div className="w-1/3 flex flex-col items-center justify-center gap-[100px] absolute top-[220px] right-[100px]">
         <button
           onClick={() => handleSegment(191, 227, [
-            { color: [255, 15, 0], count: 36 },
-            { color: [255, 255, 255], count: 1 },
+            { color: [255, 15, 0], count: 5 },
+            { color: [255, 255, 255], count: 2 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -93,8 +93,8 @@ export default function Diagram() {
 
         <button
           onClick={() => handleSegment(0, 59, [
-            { color: [44, 17, 79], count: 59 },
-            { color: [255, 255, 255], count: 1 },
+            { color: [44, 17, 79], count: 5 },
+            { color: [255, 255, 255], count: 2 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
@@ -113,8 +113,8 @@ export default function Diagram() {
 
         <button
           onClick={() => handleSegment(228, 283, [
-            { color: [255, 255, 0], count: 55 },
-            { color: [255, 255, 255], count: 1 },
+            { color: [255, 255, 0], count: 5 },
+            { color: [255, 255, 255], count: 2 },
           ])}
           className="flex bg-[#536365]/35 text-[#FEFCFC] font-semibold text-[36px] px-10 py-6 rounded cursor-pointer"
         >
