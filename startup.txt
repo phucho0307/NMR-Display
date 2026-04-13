@@ -47,7 +47,7 @@ done
 # ---------- OPEN CHROMIUM KIOSK ----------
 # Don't open a second copy if already running
 pgrep -x chromium-browser > /dev/null || \
-    nohup chromium-browser --kiosk --noerrdialogs --disable-infobars "$URL" \
+    nohup chromium-browser --kiosk --noerrdialogs --disable-infobars --force-device-scale-factor=0.75 "$URL" \
     > "$LOG_DIR/chromium.log" 2>&1 &
 
 echo "===== DONE $(date) =====" >> "$LOG_DIR/boot.log"
