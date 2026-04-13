@@ -122,10 +122,9 @@ The `ChemicalShiftData` array contains several examples explaining how chemical 
 The LED lights will light up when you click on the components in the page: "Diagram of Components".
 
 Below is the steps how this LED works:
-1. In the Diagram.tsx file, the calling API endpoint is const API_URL = "http://localhost:8000/lighting-controller/"; which link to the port running [Standard-Lighting-API](https://github.com/Knox-College-Makerspace-Network/Standard-Lighting-API.git). Also, there are 2 ports running simultaneously, one is the NMR Display backend and one is the Standard Lighting API (port 8000 and 8001 for example). 
+1. In the Diagram.tsx file, the calling API endpoint is const API_URL = "http://localhost:8000/lighting-controller/", which links to the port running Standard-Lighting-API. Also, there are 2 ports running simultaneously: one is the NMR Display backend and one is the Standard Lighting API (port 8000 and 8001, for example).
 
-2. You can change the LED effects by modifying the JSON request. I recommend to use the traverse_segment function as it is the most convenience one so far. 
-More specific in [Standard-Lighting-API](https://github.com/Knox-College-Makerspace-Network/Standard-Lighting-API.git) and [LEDcontrol_pico_micropython](https://github.com/Knox-College-Makerspace-Network/LEDcontrol_pico_micropython.git).
+2. You can change the LED effects by modifying the JSON request. I recommend using the traverse_segment function as it is the most convenient one so far. More specifics in Standard-Lighting-API and LEDcontrol_pico_micropython.
 
 ## How to Contribute
 
