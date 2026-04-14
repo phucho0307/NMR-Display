@@ -1,53 +1,100 @@
 #!/bin/bash
 set -e
 
-# ---------------------------------------- CONFIG ----------------------------------------
 USER_NAME="$(whoami)"
-BACKEND_DIR="/home/$USER_NAME/projects/backend"
+
+BACKEND_DIR="/home/$USER_NAME/Documents/NMR-Display/backend"
+LIGHTING_DIR="/home/$USER_NAME/Documents/Standard-Lighting-API"
+
 LOG_DIR="/home/$USER_NAME/server_logs"
-URL="http://localhost:8000/"
-# ----------------------------------------------------------------------------------------
+
+URL="http://localhost:8001/"
+LIGHTING_URL="http://localhost:8000/"
 
 mkdir -p "$LOG_DIR"
+
 echo "===== START $(date) =====" >> "$LOG_DIR/boot.log"
 
-# Make sure system PATH is decent (systemd sometimes strips PATH)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export HOME="/home/$USER_NAME"
+export DISPLAY=:0
+export XAUTHORITY="/home/$USER_NAME/.Xauthority"
+export GIT_SSH_COMMAND="ssh -i /home/$USER_NAME/.ssh/id_ed25519 -o StrictHostKeyChecking=no"
 
-# ---------- BACKEND: update + start ----------
+LOCKFILE="/tmp/kiosk.lock"
+[ -f "$LOCKFILE" ] && exit 0
+trap "rm -f $LOCKFILE" EXIT
+touch "$LOCKFILE"
+
+# ========================
+# Start NMR Backend
+# ========================
 cd "$BACKEND_DIR"
-
 git fetch origin >> "$LOG_DIR/git.log" 2>&1
-git reset --hard "origin/main" >> "$LOG_DIR/git.log" 2>&1
+git reset --hard origin/main >> "$LOG_DIR/git.log" 2>&1
 
-# Activate virtualenv if you use one (uncomment if needed):
-# source "$BACKEND_DIR/venv/bin/activate"
+source "$BACKEND_DIR/venv/bin/activate"
+if ! lsof -i:8001 > /dev/null 2>&1; then
+    nohup python manage.py runserver 0.0.0.0:8001 --noreload >> "$LOG_DIR/django.log" 2>&1 &
+fi
+deactivate
 
-# Start Django only if it's not already running
-pgrep -f "manage.py runserver" > /dev/null || \
-    nohup python3 manage.py runserver 0.0.0.0:8000 > "$LOG_DIR/django.log" 2>&1 &
-
-# ---------- WAIT FOR GUI (X) ----------
-# Chromium needs a display; wait up to 60s for X to start
+# Wait for X server
 for i in {1..60}; do
     [ -S /tmp/.X11-unix/X0 ] && break
     sleep 1
 done
 
-export DISPLAY=:0
-export XAUTHORITY="/home/$USER_NAME/.Xauthority"
+# ========================
+# Start Lighting API (non-blocking)
+# ========================
+cd "$LIGHTING_DIR"
+git fetch origin >> "$LOG_DIR/git.log" 2>&1
+git reset --hard origin/main >> "$LOG_DIR/git.log" 2>&1
 
-# ---------- WAIT FOR DJANGO ----------
-# Wait up to 120s for Django to be responsive before opening browser
-for i in {1..120}; do
-    curl -s "$URL" > /dev/null 2>&1 && break
+source "$LIGHTING_DIR/Lighting_API/venv/bin/activate"
+if ! lsof -i:8000 > /dev/null 2>&1; then
+    nohup python "$LIGHTING_DIR/Lighting_API/manage.py" runserver 0.0.0.0:8000 --noreload >> "$LOG_DIR/lighting.log" 2>&1 &
+fi
+deactivate
+
+# Try Lighting API, but DO NOT block boot
+for i in {1..30}; do
+    if curl -s "$LIGHTING_URL" > /dev/null; then
+        echo "Lighting API is up" >> "$LOG_DIR/boot.log"
+        break
+    fi
     sleep 1
 done
 
-# ---------- OPEN CHROMIUM KIOSK ----------
-# Don't open a second copy if already running
-pgrep -x chromium-browser > /dev/null || \
-    nohup chromium-browser --kiosk --noerrdialogs --disable-infobars --force-device-scale-factor=0.75 "$URL" \
-    > "$LOG_DIR/chromium.log" 2>&1 &
+# ========================
+# Wait for NMR Backend (CRITICAL)
+# ========================
+for i in {1..120}; do
+    if curl -s "$URL" > /dev/null; then
+        echo "NMR backend is up" >> "$LOG_DIR/boot.log"
+        break
+    fi
+    sleep 1
+    if [ "$i" -eq 120 ]; then
+        echo "NMR backend failed to start" >> "$LOG_DIR/boot.log"
+        exit 1
+    fi
+done
+
+# ========================
+# Launch Chromium (force clean start)
+# ========================
+pkill -f chromium || true
+sleep 5
+
+nohup chromium \
+    --kiosk \
+    --noerrdialogs \
+    --disable-infobars \
+    --force-device-scale-factor=1 \
+    "$URL" >> "$LOG_DIR/chromium.log" 2>&1 &
+
+echo "Chromium launched" >> "$LOG_DIR/boot.log"
 
 echo "===== DONE $(date) =====" >> "$LOG_DIR/boot.log"
